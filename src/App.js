@@ -6,9 +6,6 @@ import Home from './Home/Home';
 import Work from './Work/Work';
 import Projects from './Projects/Projects';
 
-
-import './App.css';
-
 const App = () => (
   <BrowserRouter>
     <Header />

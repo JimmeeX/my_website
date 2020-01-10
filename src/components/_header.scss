@@ -1,0 +1,15 @@
+#header {
+  #header-nav {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .header-nav-item {
+    color: black;
+    text-decoration: none;
+    // list-style: none;
+  }
+
+}
