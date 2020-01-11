@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Timeline from './timeline';
+
+import jobs from '../data/jobs';
+
 /*
 TODO:
   - Tree Animation (growing upwards)
@@ -14,11 +18,12 @@ TODO:
     - Logo?
     - Left/Right?
 */
+console.log(jobs);
 
 const Work = () => {
   return (
     <div id='work'>
-      <p>My Work :D</p>
+      <Timeline items={jobs} />
     </div>
   );
 }

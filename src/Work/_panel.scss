@@ -1,0 +1,25 @@
+.timeline-panel {
+  .panel-logo-wrapper {
+    display: flex;
+    justify-content: center;
+
+    background-color: silver;
+  }
+
+  .panel-logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+    background-color: red;
+  }
+
+  .panel-section {
+    // float: left;
+  };
+}
