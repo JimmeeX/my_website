@@ -1,0 +1,9 @@
+@function colour($colour-name) {
+  @return map-get($map: $colours, $key: $colour-name);
+}
+
+$colours: (
+  home_bg: #F8D2CE,
+  work_bg: #CEEAD6,
+  projects_bg: #D2E3FC
+);

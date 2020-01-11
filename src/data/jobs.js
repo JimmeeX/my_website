@@ -2,13 +2,15 @@
 
 const jobs = [
   {
+    'logo': 'img:unsw.jpg',
     'title': 'Web Application Developer',
     'company': 'UNSW',
     'startDate': 'Jan 2019',
     'endDate': 'Present',
-    'description': 'I worked in an agile development environment to design and develop web solutions that enhance student and staff experience at UNSW. \n The web solutions were developed using Javascript (React.js) and Python (Django), and tools such as Docker and Git were used to improve the workflow.'
+    'description': 'I worked in an agile development environment to design and develop web solutions that enhance student and staff experience at UNSW. The web solutions were developed using Javascript (React.js) and Python (Django), and tools such as Docker and Git were used to improve the workflow.'
   },
   {
+    'logo': 'img:unsw-mining.png',
     'title': 'Research Assistant',
     'company': 'UNSW Mining Engineering',
     'startDate': 'Aug 2019',
@@ -16,6 +18,7 @@ const jobs = [
     'description': '<Insert some description>'
   },
   {
+    'logo': 'img:unsw-business.jpg',
     'title': 'Lead Tutor and Course Administrator',
     'company': 'UNSW Business School',
     'startDate': 'Nov 2018',

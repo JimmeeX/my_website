@@ -5,13 +5,17 @@ import Panel from './panel';
 
 
 const Timeline = (props) => {
+  const panels = [
+    {logo: 'text:The beginning'},
+    ...props.items,
+    {logo: 'text:And more to come!'}
+  ];
+
   return (
     <div className='timeline'>
-      <Panel item={{logo: 'The beginning'}} />
-      { props.items.map((item, i) =>
-        <Panel key={i+1} item={item} />
+      { panels.map((item, i) =>
+        <Panel idx={i} key={i} item={item} />
       )}
-      <Panel item={{logo: 'And more to come!'}} />
     </div>
   )
 }

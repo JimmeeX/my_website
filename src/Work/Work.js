@@ -18,9 +18,8 @@ TODO:
     - Logo?
     - Left/Right?
 */
-console.log(jobs);
 
-const Work = () => {
+const Work = (props) => {
   return (
     <div id='work'>
       <Timeline items={jobs} />

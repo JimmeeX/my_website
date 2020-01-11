@@ -1,9 +1,17 @@
 .timeline-panel {
-  .panel-logo-wrapper {
+  display: grid;
+  grid-template-columns: 40fr 10fr 40fr;
+  grid-column-gap: 20px;
+
+  margin-bottom: 100px;
+
+  .panel-section-left {
+    text-align: right;
+  }
+
+  .panel-section-center {
     display: flex;
     justify-content: center;
-
-    background-color: silver;
   }
 
   .panel-logo {
@@ -14,12 +22,30 @@
 
     height: 100px;
     width: 100px;
-    border-radius: 50%;
+    border-radius: 30%;
 
     background-color: red;
   }
 
-  .panel-section {
-    // float: left;
-  };
+  .panel-logo-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 30%;
+  }
+
+  .panel-title {
+    font-size: 1.5rem;
+  }
+
+  .panel-company {
+    font-size: 1rem;
+  }
+
+  .panel-date {
+    color: #191919;
+  }
+
+  .panel-description {
+    margin-top: 20px;
+  }
 }
