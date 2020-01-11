@@ -3,7 +3,7 @@
   grid-template-columns: 40fr 10fr 40fr;
   grid-column-gap: 20px;
 
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 
   .panel-section-left {
     text-align: right;
@@ -14,23 +14,29 @@
     justify-content: center;
   }
 
-  .panel-logo {
+  .panel-logo-text-wrapper {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
 
-    height: 100px;
-    width: 100px;
-    border-radius: 30%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #C8A063;
 
-    background-color: red;
+    background-color: #639ec8;
+
+    font-size: 1.5rem;
+    color: white;
   }
 
   .panel-logo-img {
-    height: 100px;
-    width: 100px;
-    border-radius: 30%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #C8A063;
+
   }
 
   .panel-title {
@@ -42,7 +48,7 @@
   }
 
   .panel-date {
-    color: #191919;
+    color: #3d3d3d;
   }
 
   .panel-description {
