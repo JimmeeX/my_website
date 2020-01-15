@@ -1,9 +1,11 @@
 #header {
   position: fixed;
+  background-color: crimson;
   z-index: 2;
 
-  width: 100vw;
-  max-width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 
   #header-nav {
     padding: 0px;

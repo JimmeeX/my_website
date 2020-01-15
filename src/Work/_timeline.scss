@@ -1,19 +1,18 @@
 .timeline {
-  background-color: cornsilk;
+  display: flex;
+  justify-content: center;
 
   .timeline-panels {
     width: 75vw;
   }
 
   .timeline-panels * {
-    z-index: 1;
+    z-index: 1; // In front of vertline
   }
 
   .timeline-vertline {
     position: absolute;
-    z-index: 0;
-    left: 49.5%;
-    right: 49.5%;
+    width: 10px;
     background-color: brown;
   }
 }

@@ -4,14 +4,20 @@ body {
 
 body {
   margin: 0;
-  padding: 0;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #header {
   position: fixed;
+  background-color: crimson;
   z-index: 2;
-  width: 100vw;
-  max-width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 #header #header-nav {
@@ -54,7 +60,12 @@ body {
 }
 
 .timeline {
-  background-color: cornsilk;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .timeline .timeline-panels {
@@ -67,9 +78,7 @@ body {
 
 .timeline .timeline-vertline {
   position: absolute;
-  z-index: 0;
-  left: 49.5%;
-  right: 49.5%;
+  width: 10px;
   background-color: brown;
 }
 
