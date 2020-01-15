@@ -1,13 +1,19 @@
 .timeline {
+  background-color: cornsilk;
 
   .timeline-panels {
-    margin-top: 450px;
     width: 75vw;
+  }
+
+  .timeline-panels * {
+    z-index: 1;
   }
 
   .timeline-vertline {
     position: absolute;
-    top: 100px;
+    z-index: 0;
+    left: 49.5%;
+    right: 49.5%;
     background-color: brown;
   }
 }

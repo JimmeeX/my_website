@@ -3,8 +3,6 @@
   grid-template-columns: 40fr 10fr 40fr;
   grid-column-gap: 20px;
 
-  margin-bottom: 200px;
-
   .panel-section-left {
     text-align: right;
   }
@@ -20,8 +18,6 @@
     justify-content: center;
     align-items: center;
 
-    height: 150px;
-    width: 150px;
     border-radius: 50%;
     border: 2px solid #C8A063;
 
@@ -32,8 +28,6 @@
   }
 
   .panel-logo-img {
-    height: 150px;
-    width: 150px;
     border-radius: 50%;
     border: 2px solid #C8A063;
 

@@ -15,7 +15,7 @@ const files = importAll(require.context('../images/work', false, /\.(png|jpe?g|s
 
 
 const Panel = (props) => {
-  const { item, idx } = props;
+  const { item, idx, height, sep } = props;
   const { logo, title, company, startDate, endDate, description } = item;
 
   // Handle Center Logo
@@ -24,9 +24,23 @@ const Panel = (props) => {
 
   const logoSection =
     format === 'img' ? (
-      <img className='panel-logo-img' src={files[`./${value}`]} alt={value}></img>
+      <img
+        className='panel-logo-img'
+        src={files[`./${value}`]}
+        alt={value}
+        height={height}
+        width={height}
+      />
     ) : (
-      <div className='panel-logo-text-wrapper'>{value}</div>
+      <div
+        className='panel-logo-text-wrapper'
+        style={{
+          height: `${height}px`,
+          width: `${height}px`
+        }}
+      >
+        {value}
+      </div>
     )
 
   // Handle Side Section
@@ -42,7 +56,11 @@ const Panel = (props) => {
   );
 
   return (
-    <div id={idx === 0 ? 'top-panel': ''} className='timeline-panel'>
+    <div
+      id={idx === 0 ? 'top-panel': ''}
+      className='timeline-panel'
+      style={{ marginBottom: `${sep}px` }}
+    >
       { idx % 2 === 1 ?
         <div
           className='panel-section-left'
