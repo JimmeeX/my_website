@@ -13,11 +13,15 @@ body::-webkit-scrollbar {
 
 #header {
   position: fixed;
-  background-color: crimson;
   z-index: 2;
   top: 0;
   left: 0;
   right: 0;
+  /*
+  =====================
+  Header Nav List Items
+  =====================
+  */
 }
 
 #header #header-nav {
@@ -31,15 +35,65 @@ body::-webkit-scrollbar {
           justify-content: space-evenly;
 }
 
-#header #header-nav li {
+#header .header-nav-item {
   width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
-#header .header-nav-item {
-  font-size: 1.5rem;
+#header #header-nav-home {
+  background-color: #F8D2CE;
+}
+
+#header #header-nav-home::before {
+  content: url("../images/home.svg");
+}
+
+#header #header-nav-work {
+  background-color: #CEEAD6;
+}
+
+#header #header-nav-work::before {
+  content: url("../images/work.svg");
+}
+
+#header #header-nav-projects {
+  background-color: #D2E3FC;
+}
+
+#header #header-nav-projects::before {
+  content: url("../images/projects.svg");
+}
+
+#header .header-nav-item::before {
+  display: block;
+  height: 25px;
+  width: 25px;
+  margin: 5px auto;
+}
+
+#header .header-nav-item::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+#header .header-nav-link {
   color: black;
   text-decoration: none;
+  position: relative;
 }
 
 #home {

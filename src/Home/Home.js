@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * TODO
+ * 1. Background Transition Colour
+ * 2. Fade Up Enter
+ */
+
 const Home = () => {
   return (
     <div id='home'>
