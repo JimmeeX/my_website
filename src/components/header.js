@@ -25,7 +25,7 @@ const Header = () => {
 
   // Animation: Slide out when page is scrolled
   const headerScrollSpring = useSpring({
-    transform: showHeader ? 'translateY(0px)' : 'translateY(-150%)'
+    transform: showHeader ? 'translateY(0px)' : 'translateY(-300%)'
   }, config.molasses);
 
   const hoverInvertSpring = {
@@ -42,13 +42,13 @@ const Header = () => {
 
   const hoverScaleSpring = {
     'home': useSpring({
-      transform: hoverItem === 'home' ? `scale(4)` : `scale(1)`
+      transform: hoverItem === 'home' ? `scale(10)` : `scale(1)`
     }),
     'work': useSpring({
-      transform: hoverItem === 'work' ? `scale(4)` : `scale(1)`
+      transform: hoverItem === 'work' ? `scale(10)` : `scale(1)`
     }),
     'projects': useSpring({
-      transform: hoverItem === 'projects' ? `scale(4)` : `scale(1)`
+      transform: hoverItem === 'projects' ? `scale(10)` : `scale(1)`
     })
   }
 
@@ -62,8 +62,6 @@ const Header = () => {
             <div
               id={`header-nav-wrapper-${item}`}
               className='header-nav-item-wrapper'
-              onMouseEnter={() => setHoverItem(item)}
-              onMouseLeave={() => setHoverItem(null)}
               key={i}
             >
               <AnimatedLink
@@ -71,6 +69,8 @@ const Header = () => {
                 id={`header-nav-${item}`}
                 className='header-nav-link'
                 style={hoverInvertSpring[item]}
+                onMouseEnter={() => setHoverItem(item)}
+                onMouseLeave={() => setHoverItem(null)}
               >
                 <li className='header-nav-item'>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
               </AnimatedLink>
