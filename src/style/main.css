@@ -35,7 +35,11 @@ body::-webkit-scrollbar {
           justify-content: space-evenly;
 }
 
-#header .header-nav-item {
+#header .header-nav-item-wrapper {
+  position: relative;
+}
+
+#header .header-nav-link {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -50,50 +54,41 @@ body::-webkit-scrollbar {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 
-#header #header-nav-home {
-  background-color: #F8D2CE;
-}
-
-#header #header-nav-home::before {
-  content: url("../images/home.svg");
-}
-
-#header #header-nav-work {
-  background-color: #CEEAD6;
-}
-
-#header #header-nav-work::before {
-  content: url("../images/work.svg");
-}
-
-#header #header-nav-projects {
-  background-color: #D2E3FC;
-}
-
-#header #header-nav-projects::before {
-  content: url("../images/projects.svg");
-}
-
-#header .header-nav-item::before {
+#header .header-nav-link::before {
   display: block;
   height: 25px;
   width: 25px;
   margin: 5px auto;
 }
 
-#header .header-nav-item::after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
+#header #header-nav-home::before {
+  content: url("../images/home.svg");
 }
 
-#header .header-nav-link {
-  color: black;
-  text-decoration: none;
-  position: relative;
+#header #header-nav-work::before {
+  content: url("../images/work.svg");
+}
+
+#header #header-nav-projects::before {
+  content: url("../images/projects.svg");
+}
+
+#header .header-nav-circle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 #home {
