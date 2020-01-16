@@ -9,8 +9,8 @@ const sep = 200;    // Distance between two panel-logos (px)
 
 const Timeline = (props) => {
   const [percentScrolled, setPercentScrolled] = useState(0);
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
+
+  const scrollCallback = () => {
       // Get Percent Scrolled
       // https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript )
       const h = document.documentElement;
@@ -19,7 +19,14 @@ const Timeline = (props) => {
       const sh = 'scrollHeight'
       const percentScrolled = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
       setPercentScrolled(percentScrolled);
-    });
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", scrollCallback);
+
+    return () => {
+      document.removeEventListener("scroll", scrollCallback);
+    }
   }, []);
 
   const panels = [

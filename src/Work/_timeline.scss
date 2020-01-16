@@ -7,7 +7,7 @@
   }
 
   .timeline-panels * {
-    z-index: 1; // In front of vertline
+    z-index: 100; // In front of vertline
   }
 
   .timeline-vertline {

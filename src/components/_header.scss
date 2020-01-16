@@ -35,8 +35,6 @@
     color: black;
     text-decoration: none;
     position: relative;
-
-    z-index: 2;
   }
 
   .header-nav-link::before {
@@ -66,7 +64,7 @@
     left: 0;
     right: 0;
 
-    z-index: 0;
+    z-index: -1;
     width: 100px;
     height: 100px;
     border-radius: 50%;
