@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { useSpring, animated, config } from 'react-spring';
+import { useSpring, useSprings, animated, config } from 'react-spring';
 
 import { bg } from '../data/css';
 
@@ -42,43 +42,25 @@ const Header = () => {
   }, config.molasses);
 
   // Animation: Invert Circle Colour on Hover
-  const hoverInvertSpring = {
-    'home': useSpring({
-      backgroundColor: hoverItem === 'home' ? 'white': bg['home'],
-    }),
-    'work': useSpring({
-      backgroundColor: hoverItem === 'work' ? 'white': bg['work'],
-    }),
-    'projects': useSpring({
-      backgroundColor: hoverItem === 'projects' ? 'white': bg['projects'],
-    })
-  }
+  const hoverInvertSprings = useSprings(headerItems.length,
+    headerItems.map(item => ({
+      backgroundColor: hoverItem === item ? 'white': bg[item],
+    }))
+  );
 
   // Animation: Expand Colour Circle on Hover
-  const hoverScaleSpring = {
-    'home': useSpring({
-      transform: hoverItem === 'home' ? `scale(8)` : `scale(1)`
-    }),
-    'work': useSpring({
-      transform: hoverItem === 'work' ? `scale(8)` : `scale(1)`
-    }),
-    'projects': useSpring({
-      transform: hoverItem === 'projects' ? `scale(8)` : `scale(1)`
-    })
-  }
+  const hoverScaleSprings = useSprings(headerItems.length,
+    headerItems.map(item => ({
+      transform: hoverItem === item ? 'scale(8)' : 'scale(1)'
+    }))
+  );
 
-  // Transition Animation: Expand Circle to Cover the Screen
-  const showActiveSpring = {
-    'home': useSpring({
-      transform: activeItem === 'home' ? 'translateY(50%)' : 'translateY(0px)'
-    }),
-    'work': useSpring({
-      transform: activeItem === 'work' ? `translateY(50%)` : `translateY(0px)`
-    }),
-    'projects': useSpring({
-      transform: activeItem === 'projects' ? `translateY(50%)` : `translateY(0px)`
-    })
-  }
+  // Animation: Show Active Menu Item
+  const showActiveSprings = useSprings(headerItems.length,
+    headerItems.map(item => ({
+      transform: activeItem === item ? 'translateY(50%)' : 'translateY(0px)'
+    }))
+  );
 
   const AnimatedLink = animated(Link);
 
@@ -91,13 +73,13 @@ const Header = () => {
               id={`header-nav-wrapper-${item}`}
               className='header-nav-item-wrapper'
               key={i}
-              style={showActiveSpring[item]}
+              style={showActiveSprings[i]}
             >
               <AnimatedLink
                 to={item === 'home' ? '/' : `/${item}`}
                 id={`header-nav-${item}`}
                 className='header-nav-link'
-                style={hoverInvertSpring[item]}
+                style={hoverInvertSprings[i]}
                 onMouseEnter={() => setHoverItem(item)}
                 onMouseLeave={() => setHoverItem(null)}
                 onClick={() => setActiveItem(item)}
@@ -107,7 +89,7 @@ const Header = () => {
               <animated.div
                 className='header-nav-circle'
                 style={{
-                  ...hoverScaleSpring[item],
+                  ...hoverScaleSprings[i],
                   backgroundColor: `${bg[item]}`
                 }}
               />
