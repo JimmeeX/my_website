@@ -8,8 +8,6 @@ import { bg } from '../data/css';
 
 const headerItems = ['home', 'work', 'projects'];
 
-// TODO: FIX ISSUE WITH STACKING CONTEXT TRANSLATE
-
 const Header = () => {
   const pathRegex = /\/(\w+)/;
   const firstPath = pathRegex.exec(window.location.pathname);
@@ -58,7 +56,7 @@ const Header = () => {
   // Animation: Show Active Menu Item
   const showActiveSprings = useSprings(headerItems.length,
     headerItems.map(item => ({
-      transform: activeItem === item ? 'translateY(50%)' : 'translateY(0px)'
+      transform: activeItem === item ? `translate3d(0px,50%,0px)` : `translate3d(0px,0px,0px)`
     }))
   );
 
@@ -73,7 +71,10 @@ const Header = () => {
               id={`header-nav-wrapper-${item}`}
               className='header-nav-item-wrapper'
               key={i}
-              style={showActiveSprings[i]}
+              style={{
+                ...showActiveSprings[i],
+                zIndex: `${hoverItem === item ? 0 : 1}` // Stacking Index Hack
+              }}
             >
               <AnimatedLink
                 to={item === 'home' ? '/' : `/${item}`}
