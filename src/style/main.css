@@ -101,8 +101,30 @@ body::-webkit-scrollbar {
           align-items: center;
 }
 
-#home p {
-  position: absolute;
+#home .text-wrapper {
+  width: 300px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text {
+  font-size: 2rem;
+  text-align: left;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+}
+
+.text .text-span {
+  background-color: skyblue;
+  color: royalblue;
 }
 
 #projects {

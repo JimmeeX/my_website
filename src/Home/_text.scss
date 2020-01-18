@@ -1,0 +1,18 @@
+.text {
+  font-size: 2rem;
+  text-align: left;
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  // background-color: sienna;
+
+  .text-title {
+    // width: 300px;
+    // white-space: nowrap;
+  }
+
+  .text-span {
+    background-color: skyblue;
+    color: royalblue;
+  }
+}
