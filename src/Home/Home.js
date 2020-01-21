@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useTransition, animated } from 'react-spring';
 
 import Text from './text';
+import Image from './image';
 
 /**
  * TODO
@@ -68,16 +69,7 @@ const Home = (props) => {
           </animated.div>
         )}
       </div>
-      {/* <div
-        id='home-circle'
-        className='page-circle'
-        style={{
-          top: `${headerPos.top}px`,
-          left: `${headerPos.left}px`,
-          width: `${headerPos.size}px`,
-          height: `${headerPos.size}px`
-        }}
-      /> */}
+      <Image />
     </div>
   );
 }

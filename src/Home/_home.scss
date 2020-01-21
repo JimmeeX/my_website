@@ -2,18 +2,13 @@
   height: 100vh;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
-  // background-color: colour(home_bg);
-
   .text-wrapper {
-    width: 300px;
-    height: 100px;
-
     display: flex;
 
     // justify-content: center;
-    align-items: center;
+    // align-items: center;
   }
 }
