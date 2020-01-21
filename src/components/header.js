@@ -33,9 +33,16 @@ const Header = (props) => {
     }
   }, []);
 
+  /**
+   * STATIC ANIMATIONS
+   * - HEADER SCROLL
+   * - INVERT
+   * - HOVER SCALE
+   */
+
   // Animation: Slide out when page is scrolled
   const headerScrollSpring = useSpring({
-    transform: showHeader ? 'translateY(0px)' : 'translateY(-300%)'
+    transform: showHeader ? 'translateY(0px)' : 'translateY(-500%)'
   }, config.molasses);
 
   // Animation: Invert Circle Colour on Hover
@@ -54,18 +61,25 @@ const Header = (props) => {
     }))
   );
 
+  /**
+   * TRANSITION ANIMATIONS
+   * - LARGE SCALE EXPAND
+   * - TRANSLATEY
+   */
+
   // On Click Header Item
   const activeScaleSprings = useSprings(items.length,
     items.map(item => ({
-      transform: activeItem === item ? `scale(100) translateY(1%)`: 'scale(1) translateY(0px)',
-      config: { mass: 1, tension: 300, friction: 500 },
+      transform: activeItem === item ? `scale(50) translateY(1%)`: 'scale(1) translateY(0px)',
+      config: { mass: 1, tension: activeItem === item ? 50 : 500, friction: 90 },
     }))
   );
 
   // Animation: Show Active Menu Item
   const showActiveSprings = useSprings(items.length,
     items.map(item => ({
-      transform: activeItem === item ? `${translateY}` : 'translateY(0px)'
+      transform: activeItem === item ? `${translateY}` : 'translateY(0px)',
+      // delay: 1000
     }))
   );
 

@@ -22,10 +22,10 @@ const paragraphs = [
 
 const duration = 5000;
 const transitionConfig = {
-  from: { opacity: 0, transform: 'translateY(40px)' },
+  from: { opacity: 0, transform: 'translateY(100px)' },
   enter: { opacity: 1, transform: 'translateY(0px)' },
   leave: { opacity: 0, transform: 'translateY(-40px)' },
-  config: { tension: 220, friction: 120 }
+  config: { tension: 220, friction: 45 }
 }
 
 const Home = (props) => {
