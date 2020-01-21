@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { useTransition, animated } from 'react-spring';
 
@@ -15,12 +15,10 @@ const Text = (props) => {
       setIndex(index => (Math.min(index + 1, items.length - 1)));
     }, duration);
     return () => clearInterval(interval);
-  }, [items.length]);
+  }, [items.length, duration]);
 
   const transitions = useTransition(items[index], item => item.id, transitionConfig);
 
-  console.log(transitions)
-  // TODO: Try relative position, but let the item finish leaving?
   return (
     <div
       className='text'

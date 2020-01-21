@@ -28,10 +28,13 @@ const transitionConfig = {
   config: { tension: 220, friction: 120 }
 }
 
-const Home = () => {
+const Home = (props) => {
   const [items] = useState(paragraphs.map((item, i) => ({ ...item, id: i })));
   const [index, setIndex] = useState(0);
 
+  // Transition Animation
+
+  // Text Animation
   useEffect(() => {
     const interval = setInterval(() => {
       // setIndex(index => (Math.min(index + (1 / items[Math.floor(index)].children.length), items.length - 1)));
@@ -40,7 +43,7 @@ const Home = () => {
     // }, duration * (Math.min(1, items[index].children.length)));
     }, duration);
     return () => clearInterval(interval);
-  }, [items.length]);
+  }, [items]);
 
   // Fade In from Below
   const transitions = useTransition(items[Math.floor(index)], item => item.id, transitionConfig);
@@ -65,6 +68,16 @@ const Home = () => {
           </animated.div>
         )}
       </div>
+      {/* <div
+        id='home-circle'
+        className='page-circle'
+        style={{
+          top: `${headerPos.top}px`,
+          left: `${headerPos.left}px`,
+          width: `${headerPos.size}px`,
+          height: `${headerPos.size}px`
+        }}
+      /> */}
     </div>
   );
 }

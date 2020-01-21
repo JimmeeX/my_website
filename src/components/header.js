@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -6,16 +6,15 @@ import { useSpring, useSprings, animated, config } from 'react-spring';
 
 import { bg } from '../data/css';
 
-const headerItems = ['home', 'work', 'projects'];
+const translateY = 'translateY(50%)';
 
-const Header = () => {
-  const pathRegex = /\/(\w+)/;
-  const firstPath = pathRegex.exec(window.location.pathname);
-  const currPath = firstPath ? firstPath[1] : 'home';
+const Header = (props) => {
+  const { headerDetails, headerPos } = props;
+  const { items, top, size, spacing } = headerDetails;
 
+  const [activeItem, setActiveItem] = props.active;
   const [showHeader, setShowHeader] = useState(true);
   const [hoverItem, setHoverItem] = useState(null);
-  const [activeItem, setActiveItem] = useState(currPath);
 
   const scrollCallback = () => {
     const h = document.documentElement;
@@ -24,7 +23,7 @@ const Header = () => {
     const sh = 'scrollHeight'
     const percentScrolled = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
     setShowHeader(percentScrolled === 0);
-};
+  };
 
   useEffect(() => {
     document.addEventListener("scroll", scrollCallback);
@@ -40,61 +39,95 @@ const Header = () => {
   }, config.molasses);
 
   // Animation: Invert Circle Colour on Hover
-  const hoverInvertSprings = useSprings(headerItems.length,
-    headerItems.map(item => ({
-      backgroundColor: hoverItem === item ? 'white': bg[item],
+  const hoverInvertSprings = useSprings(items.length,
+    items.map(item => ({
+      backgroundColor: (hoverItem === item || activeItem === item) ? 'white': bg[item],
     }))
   );
 
   // Animation: Expand Colour Circle on Hover
-  const hoverScaleSprings = useSprings(headerItems.length,
-    headerItems.map(item => ({
-      transform: hoverItem === item ? 'scale(8)' : 'scale(1)'
+  const hoverScaleSprings = useSprings(items.length,
+    items.map(item => ({
+      transform:
+        activeItem === item ? `scale(1) ${translateY}`
+          : hoverItem === item ? 'scale(8) translateY(0px)': 'scale(1) translateY(0px)'
+    }))
+  );
+
+  // On Click Header Item
+  const activeScaleSprings = useSprings(items.length,
+    items.map(item => ({
+      transform: activeItem === item ? `scale(100) translateY(1%)`: 'scale(1) translateY(0px)',
+      config: { mass: 1, tension: 300, friction: 500 },
     }))
   );
 
   // Animation: Show Active Menu Item
-  const showActiveSprings = useSprings(headerItems.length,
-    headerItems.map(item => ({
-      transform: activeItem === item ? `translate3d(0px,50%,0px)` : `translate3d(0px,0px,0px)`
+  const showActiveSprings = useSprings(items.length,
+    items.map(item => ({
+      transform: activeItem === item ? `${translateY}` : 'translateY(0px)'
     }))
   );
 
   const AnimatedLink = animated(Link);
 
   return (
-    <animated.div id='header' style={headerScrollSpring}>
-      <ul id='header-nav'>
+    <animated.div
+      id='header'
+      style={{
+        ...headerScrollSpring,
+        top: `${top}px`
+      }}>
+      <ul id='header-nav' style={{ justifyContent: spacing }}>
         {
-          headerItems.map((item, i) =>
-            <animated.div
-              id={`header-nav-wrapper-${item}`}
-              className='header-nav-item-wrapper'
+          items.map((item, i) =>
+            <Fragment
               key={i}
-              style={{
-                ...showActiveSprings[i],
-                zIndex: `${hoverItem === item ? 0 : 1}` // Stacking Index Hack
-              }}
             >
-              <AnimatedLink
-                to={item === 'home' ? '/' : `/${item}`}
-                id={`header-nav-${item}`}
-                className='header-nav-link'
-                style={hoverInvertSprings[i]}
-                onMouseEnter={() => setHoverItem(item)}
-                onMouseLeave={() => setHoverItem(null)}
-                onClick={() => setActiveItem(item)}
+              <animated.div
+                id={`header-nav-wrapper-${item}`}
+                className='header-nav-item-wrapper'
+                style={showActiveSprings[i]}
               >
-                <li className='header-nav-item'>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
-              </AnimatedLink>
+                <AnimatedLink
+                  to={item === 'home' ? '/' : `/${item}`}
+                  id={`header-nav-${item}`}
+                  className='header-nav-link'
+                  style={{
+                    ...hoverInvertSprings[i],
+                    width: `${size}px`,
+                    height: `${size}px`
+                  }}
+                  onMouseEnter={() => setHoverItem(item)}
+                  onMouseLeave={() => setHoverItem(null)}
+                  onClick={() => setActiveItem(item)}
+                >
+                  <li className='header-nav-item'>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
+                </AnimatedLink>
+              </animated.div>
               <animated.div
                 className='header-nav-circle'
                 style={{
                   ...hoverScaleSprings[i],
-                  backgroundColor: `${bg[item]}`
+                  left: headerPos[item].left,
+                  backgroundColor: `${bg[item]}`,
+                  width: `${size}px`,
+                  height: `${size}px`,
+                  zIndex: hoverItem === item ? -50 : -49
                 }}
               />
-            </animated.div>
+              <animated.div
+                className='header-nav-circle-large'
+                style={{
+                  ...activeScaleSprings[i],
+                  left: headerPos[item].left,
+                  backgroundColor: `${bg[item]}`,
+                  width: `${size}px`,
+                  height: `${size}px`,
+                  zIndex: activeItem === item ? -99 : -100
+                }}
+              />
+            </Fragment>
           )
         }
       </ul>
