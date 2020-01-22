@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { useTransition, animated } from 'react-spring';
 
-const duration = 5000;
+// const duration = 5000;
 const transitionConfig = {
   from: { opacity: 0, transform: 'translateY(100px)' },
   enter: { opacity: 1, transform: 'translateY(0px)' },
@@ -11,7 +11,7 @@ const transitionConfig = {
 }
 
 const Text = (props) => {
-  const { paragraphs } = props;
+  const { paragraphs, duration } = props;
   const [items] = useState(paragraphs.map((item, i) => ({ ...item, id: i })));
   const [index, setIndex] = useState(0);
 
@@ -24,7 +24,7 @@ const Text = (props) => {
     // }, duration * (Math.min(1, items[index].children.length)));
     }, duration);
     return () => clearInterval(interval);
-  }, [items]);
+  }, [items, duration]);
 
   // Fade In from Below
   const transitions = useTransition(items[Math.floor(index)], item => item.id, transitionConfig);
@@ -44,6 +44,7 @@ const Text = (props) => {
         >
           <SubText
             {...item}
+            duration={duration}
           />
         </animated.div>
       )}
@@ -52,7 +53,7 @@ const Text = (props) => {
 };
 
 const SubText = (props) => {
-  const { title, children } = props;
+  const { title, children, duration } = props;
 
   const [items] = useState(children.map((item, i) => ({title: item, id: i})));
 
@@ -64,14 +65,12 @@ const SubText = (props) => {
       setIndex(index => (Math.min(index + 1, items.length - 1)));
     }, duration);
     return () => clearInterval(interval);
-  }, [items.length]);
+  }, [items.length, duration]);
 
   const transitions = useTransition(items[index], item => item.id, transitionConfig);
 
   return (
-    <div
-      className='text'
-    >
+    <div className='text'>
       <div className='text-title'>
         {title} &nbsp;
         {transitions.map(({item, props, key}) =>

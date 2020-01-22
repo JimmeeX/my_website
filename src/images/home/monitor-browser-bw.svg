@@ -4,7 +4,7 @@
     <path class="monitor-lower" d="M1.5,173.05h300a0,0,0,0,1,0,0v5a10,10,0,0,1-10,10H11.5a10,10,0,0,1-10-10v-5A0,0,0,0,1,1.5,173.05Z" />
     <rect class="monitor-support" x="138.3" y="189.17" width="26.4" height="38.51" />
     <path class="monitor-support" data-name="monitor-support" d="M94.85,227.68h113.3a10,10,0,0,1,10,10v13.42a0,0,0,0,1,0,0H84.85a0,0,0,0,1,0,0V237.68A10,10,0,0,1,94.85,227.68Z" />
-  </g>  
+  </g>
   <g class="browser">
     <rect class="browser-window" x="8.27" y="10.62" width="286.46" height="151.31" />
     <rect class="browser-window-top" data-name="browser-window" x="8.52" y="11.2" width="285.95" height="15" />
@@ -34,41 +34,41 @@
         <rect class="bar-black" data-name="bar-black" x="261.02" y="300.01" width="7.5" height="7.5" transform="translate(375.39 438.09) rotate(-180)" />
       </g>
       <g class="image-caption">
-        <rect class="text" x="222.3" y="41.81" width="50" height="1" />
-        <rect class="text" data-name="text" x="222.3" y="45.15" width="50" height="1" />
-        <rect class="text" data-name="text" x="222.3" y="48.48" width="50" height="1" />
-        <rect class="text" data-name="text" x="222.3" y="51.81" width="50" height="1" />
-        <rect class="text" data-name="text" x="222.3" y="55.15" width="50" height="1" />
-        <rect class="text" data-name="text" x="222.3" y="58.48" width="50" height="1" />
-        <rect class="text" data-name="text" x="222.3" y="61.81" width="50" height="1" />
+        <rect class="browser-text" x="222.3" y="41.81" width="50" height="1" />
+        <rect class="browser-text" data-name="browser-text" x="222.3" y="45.15" width="50" height="1" />
+        <rect class="browser-text" data-name="browser-text" x="222.3" y="48.48" width="50" height="1" />
+        <rect class="browser-text" data-name="browser-text" x="222.3" y="51.81" width="50" height="1" />
+        <rect class="browser-text" data-name="browser-text" x="222.3" y="55.15" width="50" height="1" />
+        <rect class="browser-text" data-name="browser-text" x="222.3" y="58.48" width="50" height="1" />
+        <rect class="browser-text" data-name="browser-text" x="222.3" y="61.81" width="50" height="1" />
         <rect class="image-rect" x="176.84" y="42.31" width="40" height="20" />
       </g>
       <g class="image-caption" data-name="image-caption">
         <rect class="image-rect" data-name="image-rect" x="385.92" y="243.27" width="40" height="20" transform="translate(657.7 337.11) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="242.77" width="50" height="1" transform="translate(556.79 317.11) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="246.11" width="50" height="1" transform="translate(556.79 323.77) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="249.44" width="50" height="1" transform="translate(556.79 330.44) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="252.77" width="50" height="1" transform="translate(556.79 337.11) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="256.11" width="50" height="1" transform="translate(556.79 343.77) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="259.44" width="50" height="1" transform="translate(556.79 350.44) rotate(-180)" />
-        <rect class="text" data-name="text" x="330.47" y="262.77" width="50" height="1" transform="translate(556.79 357.11) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="242.77" width="50" height="1" transform="translate(556.79 317.11) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="246.11" width="50" height="1" transform="translate(556.79 323.77) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="249.44" width="50" height="1" transform="translate(556.79 330.44) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="252.77" width="50" height="1" transform="translate(556.79 337.11) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="256.11" width="50" height="1" transform="translate(556.79 343.77) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="259.44" width="50" height="1" transform="translate(556.79 350.44) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="330.47" y="262.77" width="50" height="1" transform="translate(556.79 357.11) rotate(-180)" />
       </g>
       <g class="image-button">
         <circle class="image-circle" cx="184.99" cy="114.86" r="10" />
-        <rect class="text" data-name="text" x="329.13" y="298.29" width="20" height="1" transform="translate(524.12 428.14) rotate(-180)" />
-        <rect class="text" data-name="text" x="329.13" y="301.79" width="20" height="1" transform="translate(524.12 435.14) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="329.13" y="298.29" width="20" height="1" transform="translate(524.12 428.14) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="329.13" y="301.79" width="20" height="1" transform="translate(524.12 435.14) rotate(-180)" />
         <rect class="button" x="174.99" y="135.85" width="20" height="5" rx="2" />
       </g>
       <g class="image-button" data-name="image-button">
         <circle class="image-circle" data-name="image-circle" cx="224.49" cy="114.86" r="10" />
-        <rect class="text" data-name="text" x="368.63" y="298.29" width="20" height="1" transform="translate(603.12 428.14) rotate(-180)" />
-        <rect class="text" data-name="text" x="368.63" y="301.79" width="20" height="1" transform="translate(603.12 435.14) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="368.63" y="298.29" width="20" height="1" transform="translate(603.12 428.14) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="368.63" y="301.79" width="20" height="1" transform="translate(603.12 435.14) rotate(-180)" />
         <rect class="button" data-name="button" x="214.49" y="135.85" width="20" height="5" rx="2" />
       </g>
       <g class="image-button" data-name="image-button">
         <circle class="image-circle" data-name="image-circle" cx="263.99" cy="114.86" r="10" />
-        <rect class="text" data-name="text" x="408.13" y="298.29" width="20" height="1" transform="translate(682.12 428.14) rotate(-180)" />
-        <rect class="text" data-name="text" x="408.13" y="301.79" width="20" height="1" transform="translate(682.12 435.14) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="408.13" y="298.29" width="20" height="1" transform="translate(682.12 428.14) rotate(-180)" />
+        <rect class="browser-text" data-name="browser-text" x="408.13" y="301.79" width="20" height="1" transform="translate(682.12 435.14) rotate(-180)" />
         <rect class="button" data-name="button" x="253.99" y="135.85" width="20" height="5" rx="2" />
       </g>
     </g>

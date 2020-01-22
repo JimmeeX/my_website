@@ -89,8 +89,8 @@ body::-webkit-scrollbar {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 3fr;
-      grid-template-columns: 2fr 3fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -98,6 +98,7 @@ body::-webkit-scrollbar {
 }
 
 .text {
+  width: 475px;
   font-size: 2.5rem;
   white-space: nowrap;
 }
@@ -117,6 +118,11 @@ body::-webkit-scrollbar {
   ===================
   MONITOR BROWSER SVG
   ===================
+  */
+  /*
+  ==============
+  DATA CLOUD SVG
+  ==============
   */
 }
 
@@ -144,78 +150,130 @@ body::-webkit-scrollbar {
 
 .image .monitor-browser {
   position: absolute;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(25%, -25%, 0);
+          transform: translate3d(25%, -25%, 0);
 }
 
-.image .monitor-browser .monitor-frame {
+.image .monitor-browser .monitor .monitor-frame {
   fill: #F8D2CE;
   stroke: #310101;
   stroke-width: 3px;
 }
 
-.image .monitor-browser .monitor-lower {
+.image .monitor-browser .monitor .monitor-lower {
   fill: #310101;
   stroke: #310101;
   stroke-width: 3px;
 }
 
-.image .monitor-browser .monitor-support {
+.image .monitor-browser .monitor .monitor-support {
   fill: #310101;
 }
 
-.image .monitor-browser .browser-window {
+.image .monitor-browser .browser .browser-window {
   fill: none;
   stroke: #310101;
   stroke-width: 2px;
 }
 
-.image .monitor-browser .browser-window-top {
+.image .monitor-browser .browser .browser-window-top {
   fill: #310101;
   stroke: #310101;
   stroke-width: 2px;
 }
 
-.image .monitor-browser .browser-red {
+.image .monitor-browser .browser .browser-red {
   fill: #F85B57;
 }
 
-.image .monitor-browser .browser-yellow {
+.image .monitor-browser .browser .browser-yellow {
   fill: #E5BF3C;
 }
 
-.image .monitor-browser .browser-green {
+.image .monitor-browser .browser .browser-green {
   fill: #57C038;
 }
 
-.image .monitor-browser .bar-background {
+.image .monitor-browser .browser .bar-background {
   fill: #310101;
 }
 
-.image .monitor-browser .bar-white {
+.image .monitor-browser .browser .bar-white {
   fill: #eb392f;
 }
 
-.image .monitor-browser .bar-black {
+.image .monitor-browser .browser .bar-black {
   fill: #eb392f;
 }
 
-.image .monitor-browser .text {
+.image .monitor-browser .browser .browser-text {
   fill: #310101;
 }
 
-.image .monitor-browser .image-rect {
-  fill: none;
+.image .monitor-browser .browser .image-rect {
+  fill: #f37666;
   stroke: #310101;
 }
 
-.image .monitor-browser .image-circle {
-  fill: none;
+.image .monitor-browser .browser .image-circle {
+  fill: #f37666;
   stroke: #310101;
 }
 
-.image .monitor-browser .button {
+.image .monitor-browser .browser .button {
   fill: #eb392f;
+}
+
+.image .data-cloud {
+  position: absolute;
+  -webkit-transform: translate3d(-150%, -25%, 0);
+          transform: translate3d(-150%, -25%, 0);
+}
+
+.image .data-cloud .database .database-stack-front {
+  fill: #f37666;
+}
+
+.image .data-cloud .database .database-stack-top {
+  fill: #eb392f;
+}
+
+.image .data-cloud .cloud .cloud-back {
+  fill: #eb392f;
+  stroke: #310101;
+}
+
+.image .data-cloud .cloud .cloud-front {
+  fill: #eb392f;
+  stroke: #310101;
+}
+
+.image .data-cloud .cloud .cog {
+  fill: #f37666;
+  stroke: #310101;
+}
+
+.image .data-cloud .pie-chart .pie-segment-right {
+  fill: #F85B57;
+  stroke: #310101;
+}
+
+.image .data-cloud .pie-chart .pie-segment-top {
+  fill: #E5BF3C;
+  stroke: #504b0a;
+}
+
+.image .data-cloud .pie-chart .pie-segment-bottom {
+  fill: #57C038;
+  stroke: #064716;
+}
+
+.image .data-cloud .line-chart .line-chart-line {
+  fill: #eb392f;
+}
+
+.image .data-cloud .line-chart .line-chart-axis {
+  fill: #310101;
 }
 
 @-webkit-keyframes boy-wave {
@@ -237,6 +295,28 @@ body::-webkit-scrollbar {
   to {
     -webkit-transform: rotate(15deg);
             transform: rotate(15deg);
+  }
+}
+
+@-webkit-keyframes cog-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes cog-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 

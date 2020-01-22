@@ -11,11 +11,13 @@ const paragraphs = [
   {title: 'Welcome to my Website!', children: ['']},
 ];
 
+const duration = 5000;
+
 const Home = (props) => {
   return (
     <div id='home'>
-      <Text paragraphs={paragraphs} />
-      <Image />
+      <Text paragraphs={paragraphs} duration={duration} />
+      <Image duration={duration} />
     </div>
   );
 }

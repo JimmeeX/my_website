@@ -9,6 +9,7 @@
   .boy-waving {
     position: absolute;
     transform: translate3d(-50%, -50%, 0);
+
     .wave-arm {
       border: solid 1px black;
       transform-origin: 110px 160px;
@@ -28,79 +29,154 @@
   */
   .monitor-browser {
     position: absolute;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(25%, -25%, 0);
 
-    .monitor-frame {
-      fill: colour(home_bg);
-      stroke: rgb(49, 1, 1);
-      stroke-width: 3px;
+    .monitor {
+      .monitor-frame {
+        fill: colour(home_bg);
+        stroke: rgb(49, 1, 1);
+        stroke-width: 3px;
+      }
+
+      .monitor-lower {
+        fill: rgb(49, 1, 1);
+        stroke: rgb(49, 1, 1);
+        stroke-width: 3px;
+      }
+
+      .monitor-support {
+        fill: rgb(49, 1, 1);
+      }
     }
 
-    .monitor-lower {
-      fill: rgb(49, 1, 1);
-      stroke: rgb(49, 1, 1);
-      stroke-width: 3px;
+    .browser {
+      .browser-window {
+        fill: none;
+        stroke: rgb(49, 1, 1);
+        stroke-width: 2px;
+      }
+
+      .browser-window-top {
+        fill: rgb(49, 1, 1);
+        stroke: rgb(49, 1, 1);
+        stroke-width: 2px;
+      }
+
+      .browser-red {
+        fill: #F85B57;
+      }
+
+      .browser-yellow {
+        fill: #E5BF3C;
+      }
+
+      .browser-green {
+        fill: #57C038;
+      }
+
+      .bar-background {
+        fill: rgb(49, 1, 1);
+      }
+
+      .bar-white {
+        fill: rgb(235, 57, 47);
+        // stroke: rgb(233, 112, 112);
+      }
+
+      .bar-black {
+        fill: rgb(235, 57, 47);
+        // stroke: rgb(233, 112, 112);
+      }
+
+      .browser-text {
+        fill: rgb(49, 1, 1);
+      }
+
+      .image-rect {
+        fill: #f37666;
+        stroke: rgb(49, 1, 1);
+      }
+
+      .image-circle {
+        fill: #f37666;
+        stroke: rgb(49, 1, 1);
+      }
+
+      .button {
+        fill: rgb(235, 57, 47);
+        // stroke: rgb(235, 57, 47);
+      }
+    }
+  }
+
+  /*
+  ==============
+  DATA CLOUD SVG
+  ==============
+  */
+  .data-cloud {
+    position: absolute;
+    transform: translate3d(-150%, -25%, 0);
+
+    .database {
+      .database-stack-front {
+        fill: #f37666;
+      }
+
+      .database-stack-top {
+        fill: rgb(235, 57, 47);
+      }
     }
 
-    .monitor-support {
-      fill: rgb(49, 1, 1);
+    .cloud {
+      .cloud-back {
+        fill: rgb(235, 57, 47);
+        stroke: rgb(49, 1, 1);
+      }
+
+      .cloud-front {
+        fill: rgb(235, 57, 47);
+        stroke: rgb(49, 1, 1);
+      }
+
+      .cog {
+        fill: #f37666;
+        stroke: rgb(49, 1, 1);
+
+        // transform-origin: 129.8445px 38px;
+        // animation-name: cog-rotate;
+        // animation-duration: 10s;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
+      }
     }
 
-    .browser-window {
-      fill: none;
-      stroke: rgb(49, 1, 1);
-      stroke-width: 2px;
+    .pie-chart {
+      .pie-segment-right {
+        fill: #F85B57;
+        stroke: rgb(49, 1, 1);
+      }
+
+      .pie-segment-top {
+        fill: #E5BF3C;
+        stroke: rgb(80, 75, 10);
+      }
+
+      .pie-segment-bottom {
+        fill: #57C038;
+        stroke: rgb(6, 71, 22);
+      }
     }
 
-    .browser-window-top {
-      fill: rgb(49, 1, 1);
-      stroke: rgb(49, 1, 1);
-      stroke-width: 2px;
-    }
+    .line-chart {
+      .line-chart-line {
+        fill: rgb(235, 57, 47);
+      }
 
-    .browser-red {
-      fill: #F85B57;
-    }
+      .line-chart-axis {
+        fill: rgb(49, 1, 1);
 
-    .browser-yellow {
-      fill: #E5BF3C;
-    }
-
-    .browser-green {
-      fill: #57C038;
-    }
-
-    .bar-background {
-      fill: rgb(49, 1, 1);
-    }
-
-    .bar-white {
-      fill: rgb(235, 57, 47);
-      // stroke: rgb(233, 112, 112);
-    }
-
-    .bar-black {
-      fill: rgb(235, 57, 47);
-      // stroke: rgb(233, 112, 112);
-    }
-
-    .text {
-      fill: rgb(49, 1, 1);
-    }
-
-    .image-rect {
-      fill: none;
-      stroke: rgb(49, 1, 1);
-    }
-
-    .image-circle {
-      fill: none;
-      stroke: rgb(49, 1, 1);
-    }
-
-    .button {
-      fill: rgb(235, 57, 47);
-      // stroke: rgb(235, 57, 47);
+      }
     }
   }
 }
@@ -108,4 +184,9 @@
 @keyframes boy-wave {
   from {transform: rotate(-5deg);}
   to {transform: rotate(15deg);}
+}
+
+@keyframes cog-rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
