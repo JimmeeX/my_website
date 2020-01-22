@@ -87,21 +87,14 @@ body::-webkit-scrollbar {
 
 #home {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#home .text-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .text {
@@ -113,8 +106,138 @@ body::-webkit-scrollbar {
   color: red;
 }
 
-.home-img {
+.image {
   position: relative;
+  /*
+  =======
+  BOY SVG
+  =======
+  */
+  /*
+  ===================
+  MONITOR BROWSER SVG
+  ===================
+  */
+}
+
+.image .boy-waving {
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.image .boy-waving .wave-arm {
+  border: solid 1px black;
+  -webkit-transform-origin: 110px 160px;
+          transform-origin: 110px 160px;
+  -webkit-animation-name: boy-wave;
+          animation-name: boy-wave;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.image .monitor-browser {
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.image .monitor-browser .monitor-frame {
+  fill: #F8D2CE;
+  stroke: #310101;
+  stroke-width: 3px;
+}
+
+.image .monitor-browser .monitor-lower {
+  fill: #310101;
+  stroke: #310101;
+  stroke-width: 3px;
+}
+
+.image .monitor-browser .monitor-support {
+  fill: #310101;
+}
+
+.image .monitor-browser .browser-window {
+  fill: none;
+  stroke: #310101;
+  stroke-width: 2px;
+}
+
+.image .monitor-browser .browser-window-top {
+  fill: #310101;
+  stroke: #310101;
+  stroke-width: 2px;
+}
+
+.image .monitor-browser .browser-red {
+  fill: #F85B57;
+}
+
+.image .monitor-browser .browser-yellow {
+  fill: #E5BF3C;
+}
+
+.image .monitor-browser .browser-green {
+  fill: #57C038;
+}
+
+.image .monitor-browser .bar-background {
+  fill: #310101;
+}
+
+.image .monitor-browser .bar-white {
+  fill: #eb392f;
+}
+
+.image .monitor-browser .bar-black {
+  fill: #eb392f;
+}
+
+.image .monitor-browser .text {
+  fill: #310101;
+}
+
+.image .monitor-browser .image-rect {
+  fill: none;
+  stroke: #310101;
+}
+
+.image .monitor-browser .image-circle {
+  fill: none;
+  stroke: #310101;
+}
+
+.image .monitor-browser .button {
+  fill: #eb392f;
+}
+
+@-webkit-keyframes boy-wave {
+  from {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  to {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+@keyframes boy-wave {
+  from {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  to {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
 }
 
 #projects {

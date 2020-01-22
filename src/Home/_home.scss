@@ -1,14 +1,8 @@
 #home {
   height: 100vh;
 
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  justify-items: center;
   align-items: center;
-
-  .text-wrapper {
-    display: flex;
-
-    // justify-content: center;
-    // align-items: center;
-  }
 }

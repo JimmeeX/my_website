@@ -1,3 +1,111 @@
-.home-img {
+.image {
   position: relative;
+
+  /*
+  =======
+  BOY SVG
+  =======
+  */
+  .boy-waving {
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    .wave-arm {
+      border: solid 1px black;
+      transform-origin: 110px 160px;
+
+      animation-name: boy-wave;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  /*
+  ===================
+  MONITOR BROWSER SVG
+  ===================
+  */
+  .monitor-browser {
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+
+    .monitor-frame {
+      fill: colour(home_bg);
+      stroke: rgb(49, 1, 1);
+      stroke-width: 3px;
+    }
+
+    .monitor-lower {
+      fill: rgb(49, 1, 1);
+      stroke: rgb(49, 1, 1);
+      stroke-width: 3px;
+    }
+
+    .monitor-support {
+      fill: rgb(49, 1, 1);
+    }
+
+    .browser-window {
+      fill: none;
+      stroke: rgb(49, 1, 1);
+      stroke-width: 2px;
+    }
+
+    .browser-window-top {
+      fill: rgb(49, 1, 1);
+      stroke: rgb(49, 1, 1);
+      stroke-width: 2px;
+    }
+
+    .browser-red {
+      fill: #F85B57;
+    }
+
+    .browser-yellow {
+      fill: #E5BF3C;
+    }
+
+    .browser-green {
+      fill: #57C038;
+    }
+
+    .bar-background {
+      fill: rgb(49, 1, 1);
+    }
+
+    .bar-white {
+      fill: rgb(235, 57, 47);
+      // stroke: rgb(233, 112, 112);
+    }
+
+    .bar-black {
+      fill: rgb(235, 57, 47);
+      // stroke: rgb(233, 112, 112);
+    }
+
+    .text {
+      fill: rgb(49, 1, 1);
+    }
+
+    .image-rect {
+      fill: none;
+      stroke: rgb(49, 1, 1);
+    }
+
+    .image-circle {
+      fill: none;
+      stroke: rgb(49, 1, 1);
+    }
+
+    .button {
+      fill: rgb(235, 57, 47);
+      // stroke: rgb(235, 57, 47);
+    }
+  }
+}
+
+@keyframes boy-wave {
+  from {transform: rotate(-5deg);}
+  to {transform: rotate(15deg);}
 }
