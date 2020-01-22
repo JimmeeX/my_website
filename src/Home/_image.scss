@@ -1,4 +1,6 @@
 .image {
+  height: 100%;
+  width: 100%;
   position: relative;
 
   /*
@@ -8,7 +10,8 @@
   */
   .boy-waving {
     position: absolute;
-    transform: translate3d(-50%, -50%, 0);
+    top: 400px;
+    left: 300px;
 
     .wave-arm {
       border: solid 1px black;
@@ -29,7 +32,8 @@
   */
   .monitor-browser {
     position: absolute;
-    transform: translate3d(25%, -25%, 0);
+    top: 500px;
+    left: 400px;
 
     .monitor {
       .monitor-frame {
@@ -114,71 +118,95 @@
   DATA CLOUD SVG
   ==============
   */
-  .data-cloud {
+  // .data-cloud {
+  //   position: absolute;
+  //   transform: translate3d(-150%, -25%, 0);
+
+  .database {
     position: absolute;
-    transform: translate3d(-150%, -25%, 0);
+    top: 600px;
+    left: 200px;
 
-    .database {
-      .database-stack-front {
-        fill: #f37666;
-      }
-
-      .database-stack-top {
-        fill: rgb(235, 57, 47);
-      }
+    .database-stack-front {
+      fill: #f37666;
     }
 
-    .cloud {
-      .cloud-back {
-        fill: rgb(235, 57, 47);
-        stroke: rgb(49, 1, 1);
-      }
-
-      .cloud-front {
-        fill: rgb(235, 57, 47);
-        stroke: rgb(49, 1, 1);
-      }
-
-      .cog {
-        fill: #f37666;
-        stroke: rgb(49, 1, 1);
-
-        // transform-origin: 129.8445px 38px;
-        // animation-name: cog-rotate;
-        // animation-duration: 10s;
-        // animation-iteration-count: infinite;
-        // animation-timing-function: linear;
-      }
-    }
-
-    .pie-chart {
-      .pie-segment-right {
-        fill: #F85B57;
-        stroke: rgb(49, 1, 1);
-      }
-
-      .pie-segment-top {
-        fill: #E5BF3C;
-        stroke: rgb(80, 75, 10);
-      }
-
-      .pie-segment-bottom {
-        fill: #57C038;
-        stroke: rgb(6, 71, 22);
-      }
-    }
-
-    .line-chart {
-      .line-chart-line {
-        fill: rgb(235, 57, 47);
-      }
-
-      .line-chart-axis {
-        fill: rgb(49, 1, 1);
-
-      }
+    .database-stack-top {
+      fill: rgb(235, 57, 47);
     }
   }
+
+  .cloud {
+    position: absolute;
+    top: 450px;
+    left: 125px;
+
+    .cloud-back {
+      fill: rgb(235, 57, 47);
+      stroke: rgb(49, 1, 1);
+    }
+
+    .cloud-front {
+      fill: rgb(235, 57, 47);
+      stroke: rgb(49, 1, 1);
+    }
+  }
+
+  .cog {
+    position: absolute;
+    top: 490px;
+    left: 225px;
+    // height: 50px;
+    fill: #f37666;
+    stroke: rgb(49, 1, 1);
+
+    animation-name: cog-rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .pie-chart {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+
+    .pie-segment-right {
+      fill: #F85B57;
+      stroke: rgb(49, 1, 1);
+      animation-name: pie-slide;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
+
+    .pie-segment-top {
+      fill: #E5BF3C;
+      stroke: rgb(80, 75, 10);
+    }
+
+    .pie-segment-bottom {
+      fill: #57C038;
+      stroke: rgb(6, 71, 22);
+    }
+  }
+
+  .line-chart {
+    position: absolute;
+    top: 600px;
+    left: 0px;
+
+    .line-chart-line {
+      fill: rgb(235, 57, 47);
+    }
+
+    .line-chart-axis {
+      fill: rgb(49, 1, 1);
+
+    }
+  }
+  // }
 }
 
 @keyframes boy-wave {
@@ -189,4 +217,9 @@
 @keyframes cog-rotate {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
+}
+
+@keyframes pie-slide {
+  0% {}
+  100% {transform: translateX(5px);}
 }

@@ -108,6 +108,8 @@ body::-webkit-scrollbar {
 }
 
 .image {
+  height: 100%;
+  width: 100%;
   position: relative;
   /*
   =======
@@ -128,8 +130,8 @@ body::-webkit-scrollbar {
 
 .image .boy-waving {
   position: absolute;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
+  top: 400px;
+  left: 300px;
 }
 
 .image .boy-waving .wave-arm {
@@ -150,8 +152,8 @@ body::-webkit-scrollbar {
 
 .image .monitor-browser {
   position: absolute;
-  -webkit-transform: translate3d(25%, -25%, 0);
-          transform: translate3d(25%, -25%, 0);
+  top: 500px;
+  left: 400px;
 }
 
 .image .monitor-browser .monitor .monitor-frame {
@@ -224,55 +226,94 @@ body::-webkit-scrollbar {
   fill: #eb392f;
 }
 
-.image .data-cloud {
+.image .database {
   position: absolute;
-  -webkit-transform: translate3d(-150%, -25%, 0);
-          transform: translate3d(-150%, -25%, 0);
+  top: 600px;
+  left: 200px;
 }
 
-.image .data-cloud .database .database-stack-front {
+.image .database .database-stack-front {
   fill: #f37666;
 }
 
-.image .data-cloud .database .database-stack-top {
+.image .database .database-stack-top {
   fill: #eb392f;
 }
 
-.image .data-cloud .cloud .cloud-back {
+.image .cloud {
+  position: absolute;
+  top: 450px;
+  left: 125px;
+}
+
+.image .cloud .cloud-back {
   fill: #eb392f;
   stroke: #310101;
 }
 
-.image .data-cloud .cloud .cloud-front {
+.image .cloud .cloud-front {
   fill: #eb392f;
   stroke: #310101;
 }
 
-.image .data-cloud .cloud .cog {
+.image .cog {
+  position: absolute;
+  top: 490px;
+  left: 225px;
   fill: #f37666;
   stroke: #310101;
+  -webkit-animation-name: cog-rotate;
+          animation-name: cog-rotate;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
-.image .data-cloud .pie-chart .pie-segment-right {
+.image .pie-chart {
+  position: absolute;
+  top: 450px;
+  left: 0px;
+}
+
+.image .pie-chart .pie-segment-right {
   fill: #F85B57;
   stroke: #310101;
+  -webkit-animation-name: pie-slide;
+          animation-name: pie-slide;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
-.image .data-cloud .pie-chart .pie-segment-top {
+.image .pie-chart .pie-segment-top {
   fill: #E5BF3C;
   stroke: #504b0a;
 }
 
-.image .data-cloud .pie-chart .pie-segment-bottom {
+.image .pie-chart .pie-segment-bottom {
   fill: #57C038;
   stroke: #064716;
 }
 
-.image .data-cloud .line-chart .line-chart-line {
+.image .line-chart {
+  position: absolute;
+  top: 600px;
+  left: 0px;
+}
+
+.image .line-chart .line-chart-line {
   fill: #eb392f;
 }
 
-.image .data-cloud .line-chart .line-chart-axis {
+.image .line-chart .line-chart-axis {
   fill: #310101;
 }
 
@@ -317,6 +358,24 @@ body::-webkit-scrollbar {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes pie-slide {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@keyframes pie-slide {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
   }
 }
 
