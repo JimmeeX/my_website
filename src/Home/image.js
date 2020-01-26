@@ -9,11 +9,11 @@ import SVG from 'react-inlinesvg';
 */
 
 const images = {
-  boy: { height: 300, top: 400, left: 150, delay: 1000 },
-  browser: { height: 200, top: 500, left: 300, delay: 6000 },
-  cloud: { height: 75, top: 465, left: 0, delay: 0 },
-  cog: { height: 45, top: 490, left: 70, delay: 0 },
-  database: { height: 150, top: 550, left: 0, delay: 0 }
+  boy: { height: 300, top: 0, left: 150, delay: 1000 },
+  browser: { height: 200, top: 100, left: 300, delay: 6000 },
+  cloud: { height: 75, top: 65, left: 0, delay: 0 },
+  cog: { height: 45, top: 90, left: 70, delay: 0 },
+  database: { height: 150, top: 150, left: 0, delay: 0 }
 };
 
 const imageNames = Object.keys(images);
@@ -45,20 +45,22 @@ const Image = (props) => {
 
   return (
     <div className='image'>
-      {imageNames.map((name, i) => {
-        return (
-          <AnimatedSVG
-            src={images[name].src}
-            key={i}
-            style={{
-              ...popSprings[i],
-              position: 'absolute',
-              top: images[name].top,
-              left: images[name].left,
-            }}
-          />
-        )
-      })}
+      {/* <div className='image-wrapper'> */}
+        {imageNames.map((name, i) => {
+          return (
+            <AnimatedSVG
+              src={images[name].src}
+              key={i}
+              style={{
+                ...popSprings[i],
+                position: 'absolute',
+                top: images[name].top,
+                left: images[name].left,
+              }}
+            />
+          )
+        })}
+      {/* </div> */}
     </div>
   );
 };

@@ -30,24 +30,24 @@ const Text = (props) => {
   const transitions = useTransition(items[Math.floor(index)], item => item.id, transitionConfig);
 
   return (
-    <div
-      className='text'
-    >
-      {transitions.map(({item, props, key}) =>
-        <animated.div
-          style={{
-            ...props,
-            position: 'absolute',
-            // display: 'flex'
-          }}
-          key={key}
-        >
-          <SubText
-            {...item}
-            duration={duration}
-          />
-        </animated.div>
-      )}
+    <div className='text'>
+      <div className='text-box'>
+        {transitions.map(({item, props, key}) =>
+          <animated.div
+            style={{
+              ...props,
+              position: 'absolute',
+              // display: 'flex'
+            }}
+            key={key}
+          >
+            <SubText
+              {...item}
+              duration={duration}
+            />
+          </animated.div>
+        )}
+      </div>
     </div>
   );
 };

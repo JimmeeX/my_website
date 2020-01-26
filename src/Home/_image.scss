@@ -1,8 +1,8 @@
 .image {
-  height: 100%;
-  width: 100%;
   position: relative;
-  // z-index: -1;
+  top: 400px;
+  width: 550px;
+  height: 300px;
 
   /*
   =======
@@ -10,11 +10,6 @@
   =======
   */
   .boy-waving {
-    // position: absolute;
-    // top: 400px;
-    // left: 150px;
-    // height: 300px;
-
     .wave-arm {
       border: solid 1px black;
       transform-origin: 110px 160px;
