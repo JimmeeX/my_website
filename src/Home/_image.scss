@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   position: relative;
+  // z-index: -1;
 
   /*
   =======
@@ -9,9 +10,10 @@
   =======
   */
   .boy-waving {
-    position: absolute;
-    top: 400px;
-    left: 300px;
+    // position: absolute;
+    // top: 400px;
+    // left: 150px;
+    // height: 300px;
 
     .wave-arm {
       border: solid 1px black;
@@ -31,9 +33,9 @@
   ===================
   */
   .monitor-browser {
-    position: absolute;
-    top: 500px;
-    left: 400px;
+    // position: absolute;
+    // top: 500px;
+    // left: 300px;
 
     .monitor {
       .monitor-frame {
@@ -123,23 +125,45 @@
   //   transform: translate3d(-150%, -25%, 0);
 
   .database {
-    position: absolute;
-    top: 600px;
-    left: 200px;
+    // position: absolute;
+    // top: 550px;
+    // left: 0px;
 
-    .database-stack-front {
-      fill: #f37666;
+    .database-red {
+      .database-stack-front {
+        fill: #f37666;
+      }
+
+      .database-stack-top {
+        fill: rgb(235, 57, 47);
+      }
     }
 
-    .database-stack-top {
-      fill: rgb(235, 57, 47);
+    .database-green {
+      .database-stack-front {
+        fill: #8cf366;
+      }
+
+      .database-stack-top {
+        fill: #60be22;
+      }
+    }
+
+    .database-blue {
+      .database-stack-front {
+        fill: #66b4f3;
+      }
+
+      .database-stack-top {
+        fill: #166e86;
+      }
     }
   }
 
   .cloud {
-    position: absolute;
-    top: 450px;
-    left: 125px;
+    // position: absolute;
+    // top: 465px;
+    // left: 0px;
 
     .cloud-back {
       fill: rgb(235, 57, 47);
@@ -153,9 +177,9 @@
   }
 
   .cog {
-    position: absolute;
-    top: 490px;
-    left: 225px;
+    // position: absolute;
+    // top: 490px;
+    // left: 70px;
     // height: 50px;
     fill: #f37666;
     stroke: rgb(49, 1, 1);
@@ -167,9 +191,9 @@
   }
 
   .pie-chart {
-    position: absolute;
-    top: 450px;
-    left: 0px;
+    // position: absolute;
+    // top: 450px;
+    // left: 0px;
 
     .pie-segment-right {
       fill: #F85B57;
@@ -194,8 +218,8 @@
 
   .line-chart {
     position: absolute;
-    top: 600px;
-    left: 0px;
+    // top: 600px;
+    // left: 0px;
 
     .line-chart-line {
       fill: rgb(235, 57, 47);

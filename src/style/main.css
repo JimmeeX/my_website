@@ -128,12 +128,6 @@ body::-webkit-scrollbar {
   */
 }
 
-.image .boy-waving {
-  position: absolute;
-  top: 400px;
-  left: 300px;
-}
-
 .image .boy-waving .wave-arm {
   border: solid 1px black;
   -webkit-transform-origin: 110px 160px;
@@ -148,12 +142,6 @@ body::-webkit-scrollbar {
           animation-direction: alternate;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-.image .monitor-browser {
-  position: absolute;
-  top: 500px;
-  left: 400px;
 }
 
 .image .monitor-browser .monitor .monitor-frame {
@@ -226,24 +214,28 @@ body::-webkit-scrollbar {
   fill: #eb392f;
 }
 
-.image .database {
-  position: absolute;
-  top: 600px;
-  left: 200px;
-}
-
-.image .database .database-stack-front {
+.image .database .database-red .database-stack-front {
   fill: #f37666;
 }
 
-.image .database .database-stack-top {
+.image .database .database-red .database-stack-top {
   fill: #eb392f;
 }
 
-.image .cloud {
-  position: absolute;
-  top: 450px;
-  left: 125px;
+.image .database .database-green .database-stack-front {
+  fill: #8cf366;
+}
+
+.image .database .database-green .database-stack-top {
+  fill: #60be22;
+}
+
+.image .database .database-blue .database-stack-front {
+  fill: #66b4f3;
+}
+
+.image .database .database-blue .database-stack-top {
+  fill: #166e86;
 }
 
 .image .cloud .cloud-back {
@@ -257,9 +249,6 @@ body::-webkit-scrollbar {
 }
 
 .image .cog {
-  position: absolute;
-  top: 490px;
-  left: 225px;
   fill: #f37666;
   stroke: #310101;
   -webkit-animation-name: cog-rotate;
@@ -270,12 +259,6 @@ body::-webkit-scrollbar {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-}
-
-.image .pie-chart {
-  position: absolute;
-  top: 450px;
-  left: 0px;
 }
 
 .image .pie-chart .pie-segment-right {
@@ -305,8 +288,6 @@ body::-webkit-scrollbar {
 
 .image .line-chart {
   position: absolute;
-  top: 600px;
-  left: 0px;
 }
 
 .image .line-chart .line-chart-line {
