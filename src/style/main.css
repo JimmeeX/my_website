@@ -404,7 +404,6 @@ body::-webkit-scrollbar {
 .timeline .timeline-vertline {
   position: absolute;
   width: 10px;
-  background-color: brown;
 }
 
 .timeline-panel {
@@ -426,9 +425,31 @@ body::-webkit-scrollbar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.timeline-panel .panel-logo-text-wrapper {
+.timeline-panel .panel-logo-text, .timeline-panel .panel-logo-img {
+  border-radius: 50%;
+}
+
+.timeline-panel .panel-logo-border-show {
+  position: absolute;
+}
+
+.timeline-panel .panel-logo-border-wrapper {
+  position: absolute;
+}
+
+.timeline-panel .panel-logo-border {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.timeline-panel .panel-logo-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,16 +460,9 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 50%;
-  border: 2px solid #C8A063;
-  background-color: #639ec8;
+  background-color: green;
   font-size: 1.5rem;
   color: white;
-}
-
-.timeline-panel .panel-logo-img {
-  border-radius: 50%;
-  border: 2px solid #C8A063;
 }
 
 .timeline-panel .panel-title {

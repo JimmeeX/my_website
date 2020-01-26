@@ -1,5 +1,11 @@
 import React, { Fragment } from 'react';
 
+import { useSpring, animated, config } from 'react-spring';
+
+import { bg } from '../data/css';
+
+const fadeInoffset = 5; // px from border completion
+
 // Import all files from a directory
 const importAll = (r) => {
   const files = {};
@@ -15,8 +21,43 @@ const files = importAll(require.context('../images/work', false, /\.(png|jpe?g|s
 
 
 const Panel = (props) => {
-  const { item, idx, height, sep } = props;
+  const { item, idx, params, vertHeightCurr } = props;
+  const { size, sep, border, shadow, color } = params;
   const { logo, title, company, startDate, endDate, description } = item;
+
+  // Draw Border (Top-Bottom)
+  const objectSize = size + 2 * (border + shadow) // Includes borders + shadow
+  const objectSep = sep - 2 * (border + shadow)   // MarginBottom excludes shadows + borders
+  const start = idx * (objectSize + objectSep);
+
+  // How much height should be drawn (border)
+  const borderHeight = Math.min(Math.max(0, vertHeightCurr - start), objectSize);
+
+  // Fade in when 'circle' is complete
+  const fadeSpring = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: borderHeight >= objectSize - fadeInoffset ? 1 : 0 }
+  });
+
+  // Fade In going Right
+  const fadeRightSpring = useSpring({
+    from: { opacity: 0, transform: 'translateX(10%)' },
+    to: borderHeight >= objectSize - fadeInoffset ? {
+      opacity: 1,
+      transform: 'translateX(0px)'
+    } : { opacity: 0, transform: 'translateX(10%)' },
+    config: config.stiff
+  });
+
+  // Fade In going Left
+  const fadeLeftSpring = useSpring({
+    from: { opacity: 0, transform: 'translateX(-10%)' },
+    to: borderHeight >= objectSize - fadeInoffset ? {
+      opacity: 1,
+      transform: 'translateX(0px)'
+    } : { opacity: 0, transform: 'translateX(-10%)' },
+    config: config.stiff
+  });
 
   // Handle Center Logo
   const i = logo.indexOf(':');
@@ -24,23 +65,25 @@ const Panel = (props) => {
 
   const logoSection =
     format === 'img' ? (
-      <img
+      <animated.img
         className='panel-logo-img'
         src={files[`./${value}`]}
         alt={value}
-        height={height}
-        width={height}
+        height={size}
+        width={size}
+        style={fadeSpring}
       />
     ) : (
-      <div
-        className='panel-logo-text-wrapper'
+      <animated.div
+        className='panel-logo-text'
         style={{
-          height: `${height}px`,
-          width: `${height}px`
+          ...fadeSpring,
+          height: `${size}px`,
+          width: `${size}px`
         }}
       >
         {value}
-      </div>
+      </animated.div>
     )
 
   // Handle Side Section
@@ -62,40 +105,53 @@ const Panel = (props) => {
       style={{ marginBottom: `${sep}px` }}
     >
       { idx % 2 === 1 ?
-        <div
+        <animated.div
           className='panel-section-left'
-          data-aos='fade-left'
-          data-aos-offset='400'
-          data-aos-duration='1000'
-          // data-aos-anchor-placement='top-center'
-          // data-aos-anchor='#top-panel'
+          style={fadeRightSpring}
         >
           {panelSection}
-        </div>
+        </animated.div>
         :
         <div></div>
       }
-      <div
-        className='panel-section-center'
-        data-aos='fade-up'
-        // data-aos-offset='0'
-        data-aos-duration='1000'
-        // data-aos-anchor='#top-panel'
+      <div className='panel-section-center'>
+        <div
+          className='panel-logo-border-wrapper'
+          style={{
+            height: `${size + 2 * (border + shadow)}px`,
+            width: `${size + 2 * (border + shadow)}px`
+          }}
+        >
+          <div
+            className='panel-logo-border-show'
+            style={{
+              height: `${borderHeight}px`,
+              width: `${size + 2 * (border + shadow)}px`,
+              overflowY: 'hidden'
+            }}
+          >
+            <div
+              className='panel-logo-border'
+              style={{
+                height: `${size}px`,
+                width: `${size}px`,
+                border: `${border}px solid ${bg.work}`,
+                boxShadow: `0 0 0 ${shadow}px ${color},
+                            inset 0 0 0 ${size / 2}px ${bg.work}`,
 
-      >
+              }}
+            />
+          </div>
+        </div>
         {logoSection}
       </div>
       { idx % 2 === 0 ?
-        <div
+        <animated.div
           className='panel-section-right'
-          data-aos='fade-right'
-          data-aos-offset='400'
-          data-aos-duration='1000'
-          // data-aos-anchor='#top-panel'
-
+          style={fadeLeftSpring}
         >
           {panelSection}
-        </div>
+        </animated.div>
         :
         <div></div>
       }

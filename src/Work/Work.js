@@ -15,9 +15,11 @@ TODO:
     - Employment Type?
     - Location?
     - Links/Pics/Media?? Not sure
-    - Logo?
-    - Left/Right?
 */
+
+/**
+ * TODO: EXPAND on Click or Provide Limited Description
+ */
 
 const Work = (props) => {
   return (

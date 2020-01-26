@@ -42,7 +42,7 @@ const Header = (props) => {
 
   // Animation: Slide out when page is scrolled
   const headerScrollSpring = useSpring({
-    transform: showHeader ? 'translateY(0px)' : 'translateY(-500%)'
+    transform: showHeader ? 'translateY(0px)' : 'translateY(-700%)'
   }, config.molasses);
 
   // Animation: Invert Circle Colour on Hover
