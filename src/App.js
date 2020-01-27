@@ -14,7 +14,7 @@ const headerDetails = {
   spacing: 'space-around'
 };
 
-const calculateHeaderPos = (setHeaderPos) => {
+const calculateHeaderPos = (setHeaderPos, setPageWidth) => {
   const { items, top, size, spacing } = headerDetails;
   const pageWidth = document.body.offsetWidth;
   const numEl = items.length;
@@ -32,6 +32,9 @@ const calculateHeaderPos = (setHeaderPos) => {
 
   if (!!setHeaderPos)
     setHeaderPos(headerPos);
+
+  if (!!setPageWidth)
+    setPageWidth(pageWidth);
   return headerPos
 };
 
@@ -43,11 +46,12 @@ const App = () => {
   const active = useState(currPath);
 
   const [headerPos, setHeaderPos] = useState(calculateHeaderPos());
+  const [pageWidth, setPageWidth] = useState(document.body.offsetWidth);
 
   useEffect(() => {
-    window.addEventListener('resize', () => calculateHeaderPos(setHeaderPos));
+    window.addEventListener('resize', () => calculateHeaderPos(setHeaderPos, setPageWidth));
     return () => {
-      window.removeEventListener('resize', () => calculateHeaderPos(setHeaderPos));
+      window.removeEventListener('resize', () => calculateHeaderPos(setHeaderPos, setPageWidth));
     }
   }, []);
 
@@ -55,7 +59,7 @@ const App = () => {
     <BrowserRouter>
       <Header active={active} headerDetails={headerDetails} headerPos={headerPos} />
       <Route exact path='/' render={(props) => <Home {...props} active={active} headerPos={headerPos} />} />
-      <Route exact path='/work' render={(props) => <Work {...props} active={active} headerPos={headerPos} />} />
+      <Route exact path='/work' render={(props) => <Work {...props} pageWidth={pageWidth} />} />
       <Route exact path='/projects' render={(props) => <Projects {...props} active={active} headerPos={headerPos} />} />
     </BrowserRouter>
   )

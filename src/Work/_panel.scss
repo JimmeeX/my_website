@@ -2,10 +2,16 @@
   display: grid;
   grid-template-columns: 40fr 10fr 40fr;
   grid-column-gap: 20px;
-  // height: 150px;
+  height: 150px;
 
   .panel-section-left {
     text-align: right;
+  }
+
+  .panel-section-left, .panel-section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .panel-section-center {
@@ -17,12 +23,8 @@
   }
 
   .panel-logo-text, .panel-logo-img {
-    // position: absolute;
     border-radius: 50%;
-    // border: 5px solid colour(work_bg);
-    // box-shadow: 0 0 3px grey;
   }
-
 
   .panel-logo-border-show {
     position: absolute;
@@ -65,5 +67,23 @@
 
   .panel-description {
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .timeline-panel, .panel-section-left, .panel-section-center, .panel-section-right {
+    height: 75px;
+
+    .panel-title {
+      font-size: 1rem;
+    }
+
+    .panel-logo-text {
+      font-size: 0.9rem;
+    }
+
+    .panel-company, .panel-date, .panel-description {
+      font-size: 0.75rem;
+    }
   }
 }

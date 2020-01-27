@@ -22,9 +22,10 @@ TODO:
  */
 
 const Work = (props) => {
+  const { pageWidth } = props;
   return (
     <div id='work'>
-      <Timeline items={jobs} />
+      <Timeline items={jobs} pageWidth={pageWidth} />
     </div>
   );
 }

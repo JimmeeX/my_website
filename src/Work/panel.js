@@ -94,7 +94,6 @@ const Panel = (props) => {
       <div className='panel-title'><b>{title}</b></div>
       <div className='panel-company'>{company}</div>
       <div className='panel-date'><i>{dateString}</i></div>
-      <div className='panel-description'>{description}</div>
     </Fragment>
   );
 

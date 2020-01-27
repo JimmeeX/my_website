@@ -4,23 +4,45 @@ import Panel from './panel';
 import { useSpring, animated, config } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
-const params = {
-  start: 450, // Start of first panel from top (px)
-  size: 150,  // Size of panel-logo (px)
-  border: 5,  // px
-  shadow: 10, // px
-  sep: 200,   // Distance between two panel-logos (px)
-  color: 'brown' // Colour of Vertline
-}
+// const params = {
+//   start: 450, // Start of first panel from top (px)
+//   size: 150,  // Size of panel-logo (px)
+//   border: 5,  // px
+//   shadow: 10, // px
+//   sep: 200,   // Distance between two panel-logos (px)
+//   color: 'brown' // Colour of Vertline
+// }
 
 const Timeline = (props) => {
+  const { items, pageWidth } = props;
+
+  let params;
+  if (pageWidth <= 700) {
+    params = {
+      start: 450, // Start of first panel from top (px)
+      size: 75,  // Size of panel-logo (px)
+      border: 5,  // px
+      shadow: 10, // px
+      sep: 200,   // Distance between two panel-logos (px)
+      color: 'brown' // Colour of Vertline
+    }
+  }
+  else {
+    params = {
+      start: 450, // Start of first panel from top (px)
+      size: 150,  // Size of panel-logo (px)
+      border: 5,  // px
+      shadow: 10, // px
+      sep: 200,   // Distance between two panel-logos (px)
+      color: 'brown' // Colour of Vertline
+    }
+  }
+
   const { start, size, border, shadow, sep, color } = params;
 
   const [vertLineRef, bounds] = useMeasure();
   const vertHeightCurr = bounds.height;
   const [percentScrolled, setPercentScrolled] = useState(0);
-
-  console.log(vertHeightCurr);
 
   const scrollCallback = () => {
       // Get Percent Scrolled
@@ -34,6 +56,7 @@ const Timeline = (props) => {
   };
 
   useEffect(() => {
+    // Create Callback on Scroll Event
     document.addEventListener("scroll", scrollCallback);
 
     return () => {
@@ -43,7 +66,7 @@ const Timeline = (props) => {
 
   const panels = [
     {logo: 'text:The Beginning'},
-    ...props.items,
+    ...items,
     {logo: 'text:More to Come!'}
   ];
 
@@ -52,11 +75,17 @@ const Timeline = (props) => {
   const objectSize = size + 2 * (border + shadow) // Includes borders + shadow
   const objectSep = sep - 2 * (border + shadow)   // MarginBottom excludes shadows + borders
   const maxVertHeight = objectSize * panels.length + objectSep * (panels.length - 1);
+  const startVertHeight = objectSize;
+  const vertHeight = Math.max(startVertHeight, maxVertHeight * percentScrolled);
+
   const vertTop = start - (border + shadow);
-  const vertHeight = maxVertHeight * percentScrolled;
 
   // Smooth Animation of vertLine
-  const vertSpring = useSpring({ height: vertHeight, config: config.molasses });
+  const vertSpring = useSpring({
+    from: { height: 0 },
+    to: { height: vertHeight },
+    config: config.molasses
+  });
 
   return (
     <div className='timeline'>

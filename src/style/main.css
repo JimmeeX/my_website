@@ -394,7 +394,7 @@ body::-webkit-scrollbar {
 }
 
 .timeline .timeline-panels {
-  width: 75vw;
+  width: 100vw;
 }
 
 .timeline .timeline-panels * {
@@ -412,10 +412,24 @@ body::-webkit-scrollbar {
   -ms-grid-columns: 40fr 10fr 40fr;
       grid-template-columns: 40fr 10fr 40fr;
   grid-column-gap: 20px;
+  height: 150px;
 }
 
 .timeline-panel .panel-section-left {
   text-align: right;
+}
+
+.timeline-panel .panel-section-left, .timeline-panel .panel-section-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .timeline-panel .panel-section-center {
@@ -479,5 +493,20 @@ body::-webkit-scrollbar {
 
 .timeline-panel .panel-description {
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .timeline-panel, .panel-section-left, .panel-section-center, .panel-section-right {
+    height: 75px;
+  }
+  .timeline-panel .panel-title, .panel-section-left .panel-title, .panel-section-center .panel-title, .panel-section-right .panel-title {
+    font-size: 1rem;
+  }
+  .timeline-panel .panel-logo-text, .panel-section-left .panel-logo-text, .panel-section-center .panel-logo-text, .panel-section-right .panel-logo-text {
+    font-size: 0.9rem;
+  }
+  .timeline-panel .panel-company, .timeline-panel .panel-date, .timeline-panel .panel-description, .panel-section-left .panel-company, .panel-section-left .panel-date, .panel-section-left .panel-description, .panel-section-center .panel-company, .panel-section-center .panel-date, .panel-section-center .panel-description, .panel-section-right .panel-company, .panel-section-right .panel-date, .panel-section-right .panel-description {
+    font-size: 0.75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
