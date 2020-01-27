@@ -20,7 +20,7 @@ const Timeline = (props) => {
   if (pageWidth <= 700) {
     params = {
       start: 450, // Start of first panel from top (px)
-      size: 75,  // Size of panel-logo (px)
+      size: 100,  // Size of panel-logo (px)
       border: 5,  // px
       shadow: 10, // px
       sep: 200,   // Distance between two panel-logos (px)

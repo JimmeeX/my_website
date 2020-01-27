@@ -412,7 +412,6 @@ body::-webkit-scrollbar {
   -ms-grid-columns: 40fr 10fr 40fr;
       grid-template-columns: 40fr 10fr 40fr;
   grid-column-gap: 20px;
-  height: 150px;
 }
 
 .timeline-panel .panel-section-left {
@@ -483,7 +482,7 @@ body::-webkit-scrollbar {
   font-size: 1.5rem;
 }
 
-.timeline-panel .panel-company {
+.timeline-panel .panel-company, .timeline-panel .panel-date, .timeline-panel .panel-description {
   font-size: 1rem;
 }
 
@@ -496,16 +495,10 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 700px) {
-  .timeline-panel, .panel-section-left, .panel-section-center, .panel-section-right {
-    height: 75px;
-  }
-  .timeline-panel .panel-title, .panel-section-left .panel-title, .panel-section-center .panel-title, .panel-section-right .panel-title {
+  .timeline-panel .panel-title, .timeline-panel .panel-logo-text {
     font-size: 1rem;
   }
-  .timeline-panel .panel-logo-text, .panel-section-left .panel-logo-text, .panel-section-center .panel-logo-text, .panel-section-right .panel-logo-text {
-    font-size: 0.9rem;
-  }
-  .timeline-panel .panel-company, .timeline-panel .panel-date, .timeline-panel .panel-description, .panel-section-left .panel-company, .panel-section-left .panel-date, .panel-section-left .panel-description, .panel-section-center .panel-company, .panel-section-center .panel-date, .panel-section-center .panel-description, .panel-section-right .panel-company, .panel-section-right .panel-date, .panel-section-right .panel-description {
+  .timeline-panel .panel-company, .timeline-panel .panel-date, .timeline-panel .panel-description {
     font-size: 0.75rem;
   }
 }

@@ -101,19 +101,25 @@ const Panel = (props) => {
     <div
       id={idx === 0 ? 'top-panel': ''}
       className='timeline-panel'
-      style={{ marginBottom: `${sep}px` }}
+      style={{
+        marginBottom: `${sep}px`,
+        height: `${size}px`
+      }}
     >
       { idx % 2 === 1 ?
         <animated.div
           className='panel-section-left'
-          style={fadeRightSpring}
+          style={{
+            ...fadeRightSpring,
+            height: `${size}px`
+          }}
         >
           {panelSection}
         </animated.div>
         :
         <div></div>
       }
-      <div className='panel-section-center'>
+      <div className='panel-section-center' style={{ height: `${size}px` }}>
         <div
           className='panel-logo-border-wrapper'
           style={{
@@ -147,7 +153,10 @@ const Panel = (props) => {
       { idx % 2 === 0 ?
         <animated.div
           className='panel-section-right'
-          style={fadeLeftSpring}
+          style={{
+            ...fadeLeftSpring,
+            height: `${size}px`
+          }}
         >
           {panelSection}
         </animated.div>
