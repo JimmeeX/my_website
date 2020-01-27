@@ -14,10 +14,13 @@ const paragraphs = [
 const duration = 5000;
 
 const Home = (props) => {
+  const { pageWidth } = props;
   return (
     <div id='home'>
-      <Text paragraphs={paragraphs} duration={duration} />
-      <Image duration={duration} />
+      <div className='home-grid'>
+        <Text paragraphs={paragraphs} duration={duration} pageWidth={pageWidth} />
+        <Image duration={duration} pageWidth={pageWidth} />
+      </div>
     </div>
   );
 }

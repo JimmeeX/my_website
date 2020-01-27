@@ -58,7 +58,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header active={active} headerDetails={headerDetails} headerPos={headerPos} />
-      <Route exact path='/' render={(props) => <Home {...props} active={active} headerPos={headerPos} />} />
+      <Route exact path='/' render={(props) => <Home {...props} pageWidth={pageWidth} />} />
       <Route exact path='/work' render={(props) => <Work {...props} pageWidth={pageWidth} />} />
       <Route exact path='/projects' render={(props) => <Projects {...props} active={active} headerPos={headerPos} />} />
     </BrowserRouter>

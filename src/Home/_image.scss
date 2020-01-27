@@ -1,9 +1,7 @@
 .image {
   position: relative;
-  top: 400px;
   width: 550px;
   height: 300px;
-
   /*
   =======
   BOY SVG
@@ -21,17 +19,12 @@
       animation-timing-function: ease-in-out;
     }
   }
-
   /*
   ===================
   MONITOR BROWSER SVG
   ===================
   */
   .monitor-browser {
-    // position: absolute;
-    // top: 500px;
-    // left: 300px;
-
     .monitor {
       .monitor-frame {
         fill: colour(home_bg);
@@ -81,12 +74,10 @@
 
       .bar-white {
         fill: rgb(235, 57, 47);
-        // stroke: rgb(233, 112, 112);
       }
 
       .bar-black {
         fill: rgb(235, 57, 47);
-        // stroke: rgb(233, 112, 112);
       }
 
       .browser-text {
@@ -105,7 +96,6 @@
 
       .button {
         fill: rgb(235, 57, 47);
-        // stroke: rgb(235, 57, 47);
       }
     }
   }
@@ -115,15 +105,7 @@
   DATA CLOUD SVG
   ==============
   */
-  // .data-cloud {
-  //   position: absolute;
-  //   transform: translate3d(-150%, -25%, 0);
-
   .database {
-    // position: absolute;
-    // top: 550px;
-    // left: 0px;
-
     .database-red {
       .database-stack-front {
         fill: #f37666;
@@ -156,10 +138,6 @@
   }
 
   .cloud {
-    // position: absolute;
-    // top: 465px;
-    // left: 0px;
-
     .cloud-back {
       fill: rgb(235, 57, 47);
       stroke: rgb(49, 1, 1);
@@ -172,10 +150,6 @@
   }
 
   .cog {
-    // position: absolute;
-    // top: 490px;
-    // left: 70px;
-    // height: 50px;
     fill: #f37666;
     stroke: rgb(49, 1, 1);
 
@@ -184,48 +158,6 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-
-  .pie-chart {
-    // position: absolute;
-    // top: 450px;
-    // left: 0px;
-
-    .pie-segment-right {
-      fill: #F85B57;
-      stroke: rgb(49, 1, 1);
-      animation-name: pie-slide;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-timing-function: ease-in-out;
-    }
-
-    .pie-segment-top {
-      fill: #E5BF3C;
-      stroke: rgb(80, 75, 10);
-    }
-
-    .pie-segment-bottom {
-      fill: #57C038;
-      stroke: rgb(6, 71, 22);
-    }
-  }
-
-  .line-chart {
-    position: absolute;
-    // top: 600px;
-    // left: 0px;
-
-    .line-chart-line {
-      fill: rgb(235, 57, 47);
-    }
-
-    .line-chart-axis {
-      fill: rgb(49, 1, 1);
-
-    }
-  }
-  // }
 }
 
 @keyframes boy-wave {
@@ -238,7 +170,9 @@
   to {transform: rotate(360deg);}
 }
 
-@keyframes pie-slide {
-  0% {}
-  100% {transform: translateX(5px);}
+@media only screen and (max-width: 700px) {
+  .image {
+    width: 325px;
+    height: 200px;
+  }
 }

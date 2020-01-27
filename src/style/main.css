@@ -87,39 +87,71 @@ body::-webkit-scrollbar {
 
 #home {
   height: 100vh;
-  display: -ms-grid;
-  display: grid;
+  width: 100vw;
+}
+
+#home .home-grid {
+  position: absolute;
+  top: 300px;
+  bottom: 0px;
+  width: 100%;
+  display: -ms-inline-grid;
+  display: inline-grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+  #home .home-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .text {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 475px;
   font-size: 2.5rem;
   white-space: nowrap;
-  height: 0px;
-}
-
-.text .text-box {
-  position: absolute;
-  width: 475px;
-  top: 500px;
-  height: 50px;
 }
 
 .text .text-span {
   color: red;
 }
 
+@media only screen and (max-width: 700px) {
+  .text {
+    width: 280px;
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .text .subtext {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .text .text-span {
+    top: 30px;
+  }
+}
+
 .image {
   position: relative;
-  top: 400px;
   width: 550px;
   height: 300px;
   /*
@@ -272,43 +304,6 @@ body::-webkit-scrollbar {
           animation-timing-function: linear;
 }
 
-.image .pie-chart .pie-segment-right {
-  fill: #F85B57;
-  stroke: #310101;
-  -webkit-animation-name: pie-slide;
-          animation-name: pie-slide;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-.image .pie-chart .pie-segment-top {
-  fill: #E5BF3C;
-  stroke: #504b0a;
-}
-
-.image .pie-chart .pie-segment-bottom {
-  fill: #57C038;
-  stroke: #064716;
-}
-
-.image .line-chart {
-  position: absolute;
-}
-
-.image .line-chart .line-chart-line {
-  fill: #eb392f;
-}
-
-.image .line-chart .line-chart-axis {
-  fill: #310101;
-}
-
 @-webkit-keyframes boy-wave {
   from {
     -webkit-transform: rotate(-5deg);
@@ -353,21 +348,10 @@ body::-webkit-scrollbar {
   }
 }
 
-@-webkit-keyframes pie-slide {
-  0% {
-  }
-  100% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-}
-
-@keyframes pie-slide {
-  0% {
-  }
-  100% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
+@media only screen and (max-width: 700px) {
+  .image {
+    width: 325px;
+    height: 200px;
   }
 }
 

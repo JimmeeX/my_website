@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
 import { useTransition, animated } from 'react-spring';
 
-// const duration = 5000;
 const transitionConfig = {
   from: { opacity: 0, transform: 'translateY(100px)' },
   enter: { opacity: 1, transform: 'translateY(0px)' },
@@ -11,7 +10,7 @@ const transitionConfig = {
 }
 
 const Text = (props) => {
-  const { paragraphs, duration } = props;
+  const { paragraphs, duration, pageWidth } = props;
   const [items] = useState(paragraphs.map((item, i) => ({ ...item, id: i })));
   const [index, setIndex] = useState(0);
 
@@ -31,29 +30,27 @@ const Text = (props) => {
 
   return (
     <div className='text'>
-      <div className='text-box'>
-        {transitions.map(({item, props, key}) =>
-          <animated.div
-            style={{
-              ...props,
-              position: 'absolute',
-              // display: 'flex'
-            }}
-            key={key}
-          >
-            <SubText
-              {...item}
-              duration={duration}
-            />
-          </animated.div>
-        )}
-      </div>
+      {transitions.map(({item, props, key}) =>
+        <animated.div
+          style={{
+            ...props,
+            position: 'absolute',
+          }}
+          key={key}
+        >
+          <SubText
+            {...item}
+            duration={duration}
+            pageWidth={pageWidth}
+          />
+        </animated.div>
+      )}
     </div>
   );
 };
 
 const SubText = (props) => {
-  const { title, children, duration } = props;
+  const { title, children, duration, pageWidth } = props;
 
   const [items] = useState(children.map((item, i) => ({title: item, id: i})));
 
@@ -69,27 +66,61 @@ const SubText = (props) => {
 
   const transitions = useTransition(items[index], item => item.id, transitionConfig);
 
-  return (
-    <div className='text'>
-      <div className='text-title'>
-        {title} &nbsp;
-        {transitions.map(({item, props, key}) =>
-          <animated.span
-            className='text-span'
-            style={
-              index > 0 ? {
-              ...props,
-              position: 'absolute'
-              } : {
+  // Responsive Design based on PageWidth
+  const renderComponent = (pageWidth) => {
+    if (pageWidth <= 700) {
+      return (
+        <Fragment>
+          <div className='text-title'>
+            {title}
+          </div>
+          {transitions.map(({item, props, key}) =>
+            <animated.span
+              className='text-span'
+              style={
+                index > 0 ? {
+                ...props,
                 position: 'absolute'
+                } : {
+                  position: 'absolute'
+                }
               }
-            }
-            key={key}
-          >
-            {item.title}
-          </animated.span>
-        )}
-      </div>
+              key={key}
+            >
+              {item.title}
+            </animated.span>
+          )}
+        </Fragment>
+      );
+    }
+    else {
+      return (
+        <div className='text-title'>
+          {title} &nbsp;
+          {transitions.map(({item, props, key}) =>
+            <animated.span
+              className='text-span'
+              style={
+                index > 0 ? {
+                ...props,
+                position: 'absolute'
+                } : {
+                  position: 'absolute'
+                }
+              }
+              key={key}
+            >
+              {item.title}
+            </animated.span>
+          )}
+        </div>
+      );
+    }
+  }
+
+  return (
+    <div className='subtext'>
+      {renderComponent(pageWidth)}
     </div>
   );
 };
