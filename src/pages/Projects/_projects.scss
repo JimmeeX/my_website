@@ -1,6 +1,7 @@
 #projects {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(75px, 100px);
   grid-template-areas:
     "title"
     "projects"
@@ -35,5 +36,11 @@
 
       margin: 5px;
     }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #projects {
+      padding: 0px;
   }
 }

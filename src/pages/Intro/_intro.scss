@@ -1,6 +1,7 @@
 #intro {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 50px auto repeat(3, 75px);
   grid-template-areas:
     "."
     "title"
@@ -22,5 +23,13 @@
     // display: block;
     // letter-spacing: 1.5px;
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #intro {
+    #intro-text {
+      padding: 0 10px;
+    }
   }
 }

@@ -66,7 +66,6 @@ SHARED STYLES
 }
 
 .page-accent {
-  height: 80vh;
   min-height: 500px;
   background-image: linear-gradient(45deg, #13CAE2, #7328F0);
 }
@@ -74,13 +73,12 @@ SHARED STYLES
 .page-box {
   margin: auto;
   margin-top: -10rem;
-  height: 80vh;
   min-height: 500px;
   width: 80vw;
   min-width: 320px;
   border-radius: 20px;
-  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 10rem;
 }
 
@@ -226,6 +224,8 @@ SHARED STYLES
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  -ms-grid-rows: 50px auto (75px)[3];
+      grid-template-rows: 50px auto repeat(3, 75px);
       grid-template-areas: "." "title" "." "." ".";
 }
 
@@ -244,11 +244,19 @@ SHARED STYLES
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 700px) {
+  #intro #intro-text {
+    padding: 0 10px;
+  }
+}
+
 #projects {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(75px, 100px) (auto)[3] minmax(75px, 100px);
+      grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(75px, 100px);
       grid-template-areas: "title" "projects" "projects" "projects" ".";
   background-color: white;
   padding: 5px;
@@ -289,6 +297,12 @@ SHARED STYLES
   max-width: 400px;
   width: 40%;
   margin: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  #projects {
+    padding: 0px;
+  }
 }
 
 #journey {
