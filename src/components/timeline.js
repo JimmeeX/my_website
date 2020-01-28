@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSpring, animated, config } from 'react-spring';
+import { useSpring, animated as a, config } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
 import Panel from './panel';
@@ -94,14 +94,22 @@ const Timeline = (props) => {
           <Panel idx={i} key={i} item={item} params={params} vertHeightCurr={vertHeightCurr} />
         )}
       </div>
-      <animated.div
-        className='timeline-vertline'
+      <a.div
+        className='timeline-vertline-show'
         style={{
           ...vertSpring,
           top: `${vertTop}px`,
+          overflowY: 'hidden'
         }}
         ref={vertLineRef}
-      />
+      >
+        <div
+          className='timeline-vertline'
+          style={{
+            height: maxVertHeight
+          }}
+        />
+      </a.div>
     </div>
   )
 }

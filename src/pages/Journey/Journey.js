@@ -5,8 +5,6 @@ import Timeline from '../../components/timeline';
 import jobs from '../../data/jobs';
 
 const Journey = () => {
-  // const [ref, bounds] = useMeasure();
-
   return (
     <div id='journey' className='page-fill'>
         <div id='journey-header' className='header'>My Journey so Far</div>

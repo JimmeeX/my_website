@@ -72,6 +72,11 @@
     z-index: 100; // In front of vertline
   }
 
+  .timeline-vertline-show {
+    position: absolute;
+    width: 10px;
+  }
+
   .timeline-vertline {
     position: absolute;
     width: 10px;

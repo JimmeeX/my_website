@@ -208,6 +208,11 @@ SHARED STYLES
   z-index: 100;
 }
 
+.timeline .timeline-vertline-show {
+  position: absolute;
+  width: 10px;
+}
+
 .timeline .timeline-vertline {
   position: absolute;
   width: 10px;
