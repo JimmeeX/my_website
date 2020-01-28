@@ -26,6 +26,16 @@ p {
   font-size: 1rem;
 }
 
+.header-invert, .paragraph-invert {
+  color: white;
+}
+
+/*
+==========
+COMPONENTS
+==========
+*/
+
 .card-caption-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
@@ -38,6 +48,45 @@ p {
   font-size: 1rem;
 }
 
-.header-invert, .paragraph-invert {
-  color: white;
+.timeline {
+  .panel-logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 100%;
+    color: white;
+  }
+
+  .panel-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 100%;
+    font-weight: 800;
+  }
+
+  .panel-company, .panel-date, .panel-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+  }
+
+  .panel-date {
+    color: colour(dark_gray);
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .timeline {
+    .panel-title, .panel-logo-text {
+      font-size: 1rem;
+    }
+
+    .panel-logo-text {
+      font-size: 1rem;
+    }
+
+    .panel-company, .panel-date, .panel-description {
+      font-size: 0.75rem;
+    }
+  }
 }

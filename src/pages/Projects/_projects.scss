@@ -1,17 +1,19 @@
 #projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(75px, 100px);
-  grid-template-areas:
-    "title"
-    "projects"
-    "projects"
-    "projects"
-    ".";
+  #projects-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(75px, 100px);
+    grid-template-areas:
+      "title"
+      "projects"
+      "projects"
+      "projects"
+      ".";
 
-  background-color: white;
+    background-color: white;
 
-  padding: 5px;
+    padding: 5px;
+  }
 
   #projects-header {
     grid-area: title;
@@ -41,6 +43,8 @@
 
 @media only screen and (max-width: 700px) {
   #projects {
+    #projects-box {
       padding: 0px;
+    }
   }
 }

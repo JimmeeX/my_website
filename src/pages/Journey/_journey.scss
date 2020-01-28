@@ -1,3 +1,24 @@
 #journey {
-  background-color: indigo;
+  height: auto;
+
+  // background-color: hotpink;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas:
+    "."
+    "title"
+    "timeline";
+
+  #journey-header {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #journey-timeline {
+    grid-area: timeline;
+    justify-self: center;
+  }
 }

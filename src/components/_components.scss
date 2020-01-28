@@ -62,3 +62,76 @@
     padding: 0px 10px;
   }
 }
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .timeline-panels * {
+    z-index: 100; // In front of vertline
+  }
+
+  .timeline-vertline {
+    position: absolute;
+    width: 10px;
+    background-image: $gradient-vert;
+  }
+}
+
+
+.timeline-panel {
+  display: grid;
+  grid-template-columns: 40fr 10fr 40fr;
+  grid-column-gap: 20px;
+
+  .panel-section-left {
+    text-align: right;
+  }
+
+  .panel-section-left, .panel-section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .panel-section-center {
+    position: relative;
+    // z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .panel-logo-text, .panel-logo-img {
+    border-radius: 50%;
+  }
+
+  .panel-logo-border-show {
+    position: absolute;
+  }
+
+  .panel-logo-border-wrapper {
+    position: absolute;
+  }
+
+  .panel-logo-border {
+    position: absolute;
+    top: 10px;   // TODO: Optimise
+    left: 10px;
+    border-radius: 50%;
+  }
+
+  .panel-logo-text {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    background-image: $gradient-diag;
+  }
+
+  .panel-description {
+    margin-top: 20px;
+  }
+}
