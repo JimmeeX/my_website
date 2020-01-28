@@ -3,14 +3,14 @@
 
 @import '../app';
 
-@import '../components/header';
+@import '../components/components';
 
-@import '../Home/home';
-@import '../Home/text';
-@import '../Home/image';
+@import '../pages/Title/title';
 
-@import '../Projects/projects';
+@import '../pages/Intro/intro';
 
-@import '../Work/work';
-@import '../Work/timeline';
-@import '../Work/panel';
+@import '../pages/Projects/projects';
+
+@import '../pages/Journey/journey';
+
+@import '../pages/Learn/learn';

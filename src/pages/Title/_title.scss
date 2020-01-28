@@ -1,0 +1,57 @@
+#title {
+  // height: 100vh;
+  // width: 100vw;
+  // background-color: red;
+  // #title-grid {
+  //   display: grid;
+  //   grid-template-areas:
+  //     "title"
+  //     "svg";
+  //   align-self: center;
+  //   justify-self: center;
+  // }
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "."
+    "title"
+    "."
+    "."
+    "svg";
+
+  #title-text-wrapper {
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+
+    text-align: center;
+  }
+
+  #title-svg {
+    grid-area: svg;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .subtitle {
+    margin-top: 20px;
+  }
+}
+
+.boy-waving {
+  .wave-arm {
+    transform-origin: 110px 160px;
+
+    animation-name: boy-wave;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes boy-wave {
+  from {transform: rotate(-5deg);}
+  to {transform: rotate(15deg);}
+}

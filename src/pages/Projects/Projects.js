@@ -4,8 +4,7 @@ const Projects = () => {
   return (
     <div id='projects'>
       <div id='projects-grid'>
-        <div id='projects-paper'>
-        </div>
+        <h2>My Recent Projects</h2>
       </div>
     </div>
   );
