@@ -47,3 +47,15 @@ SHARED STYLES
 
   margin-bottom: 10rem;
 }
+
+.page-card {
+  margin: auto;
+
+  width: 80vw;
+  min-width: 320px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+  background-image: $gradient_diag;
+}

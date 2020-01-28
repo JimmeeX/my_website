@@ -127,6 +127,16 @@ SHARED STYLES
   margin-bottom: 10rem;
 }
 
+.page-card {
+  margin: auto;
+  width: 80vw;
+  min-width: 320px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+}
+
 #footer {
   background-color: lightpink;
 }
@@ -161,6 +171,7 @@ SHARED STYLES
 
 .card .card-caption-title {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
@@ -305,6 +316,7 @@ SHARED STYLES
 
 #title #title-text-wrapper {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: title;
       justify-self: center;
@@ -377,6 +389,7 @@ SHARED STYLES
 
 #intro #intro-text {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
@@ -392,7 +405,7 @@ SHARED STYLES
 
 @media only screen and (max-width: 700px) {
   #intro #intro-text {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
@@ -410,6 +423,7 @@ SHARED STYLES
 
 #projects #projects-header {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
@@ -462,12 +476,11 @@ SHARED STYLES
 
 #journey #journey-header {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
-  -ms-grid-column-align: center;
       justify-self: center;
 }
 
@@ -480,6 +493,33 @@ SHARED STYLES
 }
 
 #learn {
-  background-color: lightcoral;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50px (auto)[3] 50px;
+      grid-template-rows: 50px repeat(3, auto) 50px;
+      grid-template-areas: "." "title" "title" "title" ".";
+}
+
+#learn #learn-text {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: title;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 0 10rem;
+  text-align: center;
+}
+
+#learn .button {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  #learn #learn-text {
+    padding: 0 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

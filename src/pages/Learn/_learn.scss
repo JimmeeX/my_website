@@ -1,3 +1,31 @@
 #learn {
-  background-color: lightcoral;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px repeat(3, auto) 50px;
+  grid-template-areas:
+    "."
+    "title"
+    "title"
+    "title"
+    ".";
+
+  #learn-text {
+    grid-area: title;
+    justify-self: center;
+
+    padding: 0 10rem;
+    text-align: center;
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #learn {
+    #learn-text {
+      padding: 0 20px;
+    }
+  }
 }
