@@ -1,5 +1,5 @@
 #projects {
-  background-color: white;
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "title"
@@ -8,7 +8,9 @@
     "projects"
     ".";
 
-  display: grid;
+  background-color: white;
+
+  padding: 5px;
 
   #projects-header {
     grid-area: title;
@@ -27,9 +29,11 @@
     justify-content: space-evenly;
 
     .card {
-      min-width: 200px;
+      min-width: 300px;
       max-width: 400px;
       width: 40%;
+
+      margin: 5px;
     }
   }
 }

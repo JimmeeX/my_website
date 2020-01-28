@@ -58,15 +58,8 @@
 
   text-decoration: none;
 
-  // border: 1px solid black;
   .button-text {
-    color: black;
     border-radius: 15px;
-    background-color: white;
     padding: 0px 10px;
   }
-}
-
-.button:hover {
-  filter: invert(100);
 }
