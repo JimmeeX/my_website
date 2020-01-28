@@ -1,30 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap");
 .title {
-  font-family: "eurostile", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: #141C3A;
 }
 
 .header, .header-invert {
-  font-family: "eurostile", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: #141C3A;
 }
 
-.header-invert, .paragraph-invert {
-  color: white;
-}
-
 .subtitle {
-  font-family: "europa",sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   color: #222222;
 }
 
 p {
-  font-family: "europa",sans-serif;
+  font-family: 'Raleway', sans-serif;
+  line-height: 200%;
   font-size: 1rem;
+}
+
+.header-invert, .paragraph-invert {
+  color: white;
 }
 
 * {

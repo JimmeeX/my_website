@@ -1,34 +1,31 @@
-body {
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  //   sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap');
 
 .title {
-  font-family: "eurostile", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: colour(black);
 }
 
 .header, .header-invert {
-  font-family: "eurostile", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: colour(black);
 }
 
-.header-invert, .paragraph-invert {
-  color: white;
-}
-
 .subtitle {
-  font-family: "europa",sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   color: colour(dark_gray);
 }
 
 p {
-  font-family: "europa",sans-serif;
+  font-family: 'Raleway', sans-serif;
+  line-height: 200%;
   font-size: 1rem;
+}
+
+.header-invert, .paragraph-invert {
+  color: white;
 }
