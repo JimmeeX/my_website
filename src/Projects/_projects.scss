@@ -1,3 +1,24 @@
 #projects {
-  color: green;
+  height: 100vh;
+  width: 100vw;
+
+  #projects-grid {
+    position: absolute;
+    top: 350px;
+    bottom: 0px;
+    width: 100%;
+
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #projects-paper {
+    width: 60vw;
+    height: 100%;
+
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0 0 5px grey;
+  }
 }
