@@ -23,3 +23,25 @@ SHARED STYLES
   height: 100vh;
   min-height: 500px;
 }
+
+.page-accent {
+  height: 80vh;
+  min-height: 500px;
+  background-image: $gradient_diag;
+}
+
+.page-box {
+  margin: auto;
+  margin-top: -10rem;
+
+  height: 80vh;
+  min-height: 500px;
+
+  width: 80vw;
+  min-width: 320px;
+
+  border-radius: 20px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+
+  margin-bottom: 10rem;
+}
