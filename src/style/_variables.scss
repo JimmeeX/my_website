@@ -3,7 +3,20 @@
 }
 
 $colours: (
-  home_bg: #F8D2CE,
-  work_bg: #CEEAD6,
-  projects_bg: #D2E3FC
+  accent: #7328F0,
+  accent_light: #13CAE2,
+  dark_gray: #222222,
+  black: #141C3A
+);
+
+$gradient_diag: linear-gradient(
+    45deg,
+    colour(accent_light),
+    colour(accent)
+  );
+
+$gradient_vert: linear-gradient(
+  0deg,
+  colour(accent_light),
+  colour(accent)
 );

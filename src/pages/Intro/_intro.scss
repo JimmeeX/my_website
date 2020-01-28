@@ -1,3 +1,28 @@
 #intro {
-  background-color: green;
+  height: 80vh;
+  min-height: 500px;
+  background-image: $gradient_diag;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "."
+    "title"
+    "."
+    "."
+    ".";
+
+  #intro-text {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+
+    padding: 0 10rem;
+
+    text-align: center;
+  }
+
+  #intro-paragraph {
+    margin-top: 20px;
+  }
 }

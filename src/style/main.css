@@ -1,9 +1,30 @@
 .title {
   font-family: "eurostile", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #141C3A;
+}
+
+.header, .header-invert {
+  font-family: "eurostile", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #141C3A;
+}
+
+.header-invert, .paragraph-invert {
+  color: white;
 }
 
 .subtitle {
   font-family: "europa",sans-serif;
+  font-size: 1rem;
+  color: #222222;
+}
+
+p {
+  font-family: "europa",sans-serif;
+  font-size: 1rem;
 }
 
 * {
@@ -30,15 +51,6 @@ SHARED STYLES
   min-height: 500px;
 }
 
-.title {
-  font-size: 2.5rem;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: #222222;
-}
-
 #footer {
   background-color: lightpink;
 }
@@ -55,10 +67,8 @@ SHARED STYLES
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: title;
-  -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
 }
@@ -116,7 +126,31 @@ SHARED STYLES
 }
 
 #intro {
-  background-color: green;
+  height: 80vh;
+  min-height: 500px;
+  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "." "title" "." "." ".";
+}
+
+#intro #intro-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 0 10rem;
+  text-align: center;
+}
+
+#intro #intro-paragraph {
+  margin-top: 20px;
 }
 
 #projects {
