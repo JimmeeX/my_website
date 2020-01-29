@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SEO from './components/seo';
 import Title from './pages/Title/Title';
 import Intro from './pages/Intro/Intro';
 import Projects from './pages/Projects/Projects';
@@ -11,6 +12,7 @@ import Footer from './components/footer';
 const App = () => {
   return (
     <div className='app'>
+      <SEO />
       <Title />
       <Intro />
       <Projects />
