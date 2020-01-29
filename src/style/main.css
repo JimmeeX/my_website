@@ -581,9 +581,9 @@ a {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(75px, 100px) auto;
-      grid-template-rows: minmax(75px, 100px) auto;
-      grid-template-areas: "title" "timeline";
+  -ms-grid-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
+      grid-template-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
+      grid-template-areas: "title" "timeline" "button" ".";
 }
 
 #journey #journey-header {
@@ -600,6 +600,15 @@ a {
   -ms-grid-column: 1;
   grid-area: timeline;
   -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#journey #journey-button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: button;
+  -ms-flex-item-align: center;
+      align-self: center;
       justify-self: center;
 }
 

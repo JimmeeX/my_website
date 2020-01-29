@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div id='header'>
       <div id='header-bar'>
-        <a id='header-logo' href={window.location}><Logo width={75} height={75}/></a>
+        <a id='header-logo' href='https://jameslin.me/'><Logo width={75} height={75}/></a>
         <Button id='header-button' large text='Contact Me' url='mailto:jameslin199713@gmail.com' />
       </div>
     </div>

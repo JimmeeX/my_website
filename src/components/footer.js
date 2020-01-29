@@ -10,8 +10,7 @@ import EnvelopeIcon from '../images/envelope.svg';
 const Footer = () => {
   return (
     <div id='footer'>
-      <a id='footer-logo' href={window.location}><Logo width={50} height={50}/></a>
-      {/* <div id='footer-header' className='header-invert'>Want to know more?</div> */}
+      <a id='footer-logo' href='https://jameslin.me/'><Logo width={50} height={50}/></a>
       <div id='icon-bar'>
         <Icon url='https://github.com/JimmeeX' src={GithubIcon} />
         <Icon url='https://www.linkedin.com/in/jameslin1997/' src={LinkedInIcon} />

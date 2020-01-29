@@ -131,7 +131,7 @@ const Panel = (props) => {
       id={idx === 0 ? 'top-panel': ''}
       className='timeline-panel'
       style={{
-        marginBottom: `${sep}px`,
+        marginBottom: idx === (length - 1) ? `50px` : `${sep}px`,
         height: `${size}px`
       }}
     >

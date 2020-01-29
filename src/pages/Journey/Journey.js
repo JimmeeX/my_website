@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button from '../../components/button';
 import Timeline from '../../components/timeline';
 
 import jobs from '../../data/jobs';
@@ -11,6 +12,12 @@ const Journey = () => {
         <div id='journey-timeline'>
           <Timeline items={jobs} />
         </div>
+        <Button
+          id='journey-button'
+          large
+          text={'Learn more on LinkedIn'}
+          url={'https://www.linkedin.com/in/jameslin1997/'}
+        />
     </div>
   );
 }

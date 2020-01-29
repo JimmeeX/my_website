@@ -10,7 +10,7 @@ const projectList = [
   {
     'title': 'My Recursive Personal Portfolio.',
     'img': 'my-website.png',
-    'url': window.location
+    'url': 'https://jameslin.me/'
   }
 ];
 
