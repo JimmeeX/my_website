@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
+import { useSpring, animated as a, config } from 'react-spring';
 
 import Button from '../../components/button';
 import Card from '../../components/card';
 
 import projectList from '../../data/projectList';
 
+const fadeOffset = 100;
+
 const Projects = () => {
+  const [fade, setFade] = useState(false);
+  const ref = useRef();
+
+  const checkFade = useCallback(() => {
+    const el = ref.current;
+    if (el == null) {
+      setFade(false);
+      return;
+    };
+
+    const bounds = el.getBoundingClientRect();
+    const { top } = bounds;
+    if (top - window.innerHeight + fadeOffset < 0) setFade(true);
+    else setFade(false);
+  }, [ref, setFade]);
+
+  useEffect(() => {
+    document.addEventListener("scroll", checkFade);
+    return () => {
+      document.removeEventListener("scroll", checkFade);
+    }
+  }, [checkFade]);
+
+  const fadeSpring = useSpring({
+    from: { opacity: 0, transform: 'translateY(25%)' },
+    to: fade ? {
+      opacity: 1, transform: 'translateY(0px)'
+    } : {
+      opacity: 0, transform: 'translateY(25%)'
+    },
+    config: config.stiff
+  });
+
   return (
-    <div id='projects' className='page-box-wrapper'>
+    <a.div ref={ref} id='projects' className='page-box-wrapper' style={fadeSpring}>
       <div id='projects-box' className='page-box'>
         <div id='projects-header' className='header'>My Recent Projects</div>
         <div id='projects-container'>
@@ -22,7 +58,7 @@ const Projects = () => {
           url={'https://github.com/JimmeeX'}
         />
       </div>
-    </div>
+    </a.div>
   );
 }
 
