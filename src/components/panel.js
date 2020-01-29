@@ -16,7 +16,7 @@ const importAll = (r) => {
   return files;
 };
 
-const files = importAll(require.context('../images/work', false, /\.(png|jpe?g|svg)$/));
+const files = importAll(require.context('../images/journey', false, /\.(png|jpe?g|svg)$/));
 
 /**Functions for Color Interpolation */
 const hexToRgb = (hex) => {
