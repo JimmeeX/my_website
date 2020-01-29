@@ -12,7 +12,7 @@ const SEO = () => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${title}`}
+      titleTemplate={`%s | ${description}`}
       meta={[
         {
           name: `description`,
