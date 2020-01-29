@@ -1,5 +1,3 @@
-// TODO: List of Work Experience
-
 const jobs = [
   {
     'logo': 'img:mail.png',
