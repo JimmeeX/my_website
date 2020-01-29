@@ -11,7 +11,7 @@ const jobs = [
   },
   {
     'logo': 'img:unsw-business.jpg',
-    'title': 'Lead Tutor & Course Administrator',
+    'title': 'Course Tutor & Admin',
     'company': 'UNSW Business School',
     'startDate': 'Nov 2018',
     'endDate': 'May 2019',

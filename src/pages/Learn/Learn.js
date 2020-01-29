@@ -7,8 +7,8 @@ const Learn = () => {
     <div id='learn' className='page-card'>
       <div id='learn-text'>
         <div id='learn-header' className='header-invert'>Learning & Sharing</div>
-        <p id='learn-paragraph' className='paragraph-invert'>I love learning and sharing resources. You can check out what I know here. Learn and grow together as a community. Inspired by Nikita Voloboev</p>
-        <Button id='learn-button' large text='Checkout my Wiki' url='https://jimmeex.gitbook.io/wiki/' />
+        <p id='learn-paragraph' className='paragraph-invert'>I love discovering new apps, software, tech, gadgets and the likes to improve my day-to-day life. Inspired by <a className='text-link' href='https://wiki.nikitavoloboev.xyz/'>Nikita Voloboev</a>, I've recently started to document & share resources, courses, and apps with the community.</p>
+        <Button id='learn-button' large text='Check out my Wiki' url='https://jimmeex.gitbook.io/wiki/' />
       </div>
     </div>
   );

@@ -1,14 +1,4 @@
 #learn {
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(100px, 125px);
-  // grid-template-areas:
-  //   "title"
-  //   "paragraph"
-  //   "paragraph"
-  //   "paragraph"
-  //   "button";
-
   #learn-text {
     display: grid;
     grid-template-columns: 1fr;
@@ -38,6 +28,11 @@
     grid-area: button;
     align-self: center;
     justify-self: center;
+  }
+
+  .text-link {
+    color: white;
+    text-decoration: underline;
   }
 }
 

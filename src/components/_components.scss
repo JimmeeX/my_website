@@ -123,11 +123,9 @@
 }
 
 .button, .button-large {
-  background-image: $gradient-diag;
-
-  text-decoration: none;
-
   display: grid;
+
+  background-image: $gradient-diag;
 
   .button-text {
     align-self: center;

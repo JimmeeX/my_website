@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useSpring, animated as a, config } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
@@ -45,7 +45,7 @@ const Timeline = (props) => {
 
   const timelineRef = useRef();
 
-  const scrollCallback = () => {
+  const scrollCallback = useCallback(() => {
       // Get Percent Scrolled
       const el = timelineRef.current;
       if (el == null) return;
@@ -57,7 +57,7 @@ const Timeline = (props) => {
 
       const percent = Math.min(Math.max(0, currHeight) / height, 1);
       setPercentScrolled(percent);
-  };
+  }, [timelineRef, start, setPercentScrolled]);
 
   useEffect(() => {
     // Create Callback on Scroll Event
@@ -68,7 +68,7 @@ const Timeline = (props) => {
       document.removeEventListener("scroll", scrollCallback);
       window.removeEventListener('resize', () => setPageWidth(document.body.offsetWidth));
     }
-  }, []);
+  }, [scrollCallback]);
 
   // Calculate properties of the vertLine
   // Distance from top of first Panel to top of bottom of Last Panel
