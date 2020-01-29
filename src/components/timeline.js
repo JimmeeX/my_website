@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useSpring, animated as a, config } from 'react-spring';
 import useMeasure from 'react-use-measure';
+import { ResizeObserver } from '@juggle/resize-observer';
 
 import Panel from './panel';
 
@@ -39,7 +40,7 @@ const Timeline = (props) => {
 
   const { start, size, border, shadow, sep } = params;
 
-  const [vertLineRef, vertLineBounds] = useMeasure();
+  const [vertLineRef, vertLineBounds] = useMeasure({ polyfill: ResizeObserver });
   const vertHeightCurr = vertLineBounds.height;
   const [percentScrolled, setPercentScrolled] = useState(0);
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 import useMeasure from 'react-use-measure';
+import { ResizeObserver } from '@juggle/resize-observer';
 
 import Button from './button';
 
@@ -11,7 +12,7 @@ const Card = (props) => {
 
   const [disabled, setDisabled] = useState(true);
   const [flipped, setFlipped] = useState(true); // True for Picture
-  const [ref, bounds] = useMeasure();
+  const [ref, bounds] = useMeasure({ polyfill: ResizeObserver });
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
