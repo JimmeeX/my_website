@@ -20,7 +20,6 @@ SHARED STYLES
 */
 
 .page-fill {
-  height: 100vh;
   min-height: 500px;
 }
 
@@ -49,6 +48,7 @@ SHARED STYLES
 }
 
 .page-card {
+  position: relative;
   margin: auto;
 
   width: 80vw;

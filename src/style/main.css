@@ -102,7 +102,6 @@ SHARED STYLES
 =============
 */
 .page-fill {
-  height: 100vh;
   min-height: 500px;
 }
 
@@ -128,6 +127,7 @@ SHARED STYLES
 }
 
 .page-card {
+  position: relative;
   margin: auto;
   width: 80vw;
   min-width: 320px;
@@ -138,7 +138,64 @@ SHARED STYLES
 }
 
 #footer {
-  background-color: lightpink;
+  margin-top: -10rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (75px)[3] auto auto 50px;
+      grid-template-rows: repeat(3, 75px) auto auto 50px;
+      grid-template-areas: "." "." "." "title" "icons" ".";
+  background-color: #141C3A;
+}
+
+#footer #footer-header {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: title;
+  -ms-flex-item-align: center;
+      align-self: center;
+      justify-self: center;
+}
+
+#footer #icon-bar {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: icons;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icon {
+  height: 45px;
+  width: 45px;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+}
+
+.icon .icon-padding {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.icon .icon-svg {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 24px;
+  width: 24px;
 }
 
 .card {
@@ -193,7 +250,6 @@ SHARED STYLES
 
 .button {
   display: inline-block;
-  position: relative;
   background-image: linear-gradient(45deg, #13CAE2, #7328F0);
   padding: 2px;
   border-radius: 20px;
@@ -307,6 +363,7 @@ SHARED STYLES
 }
 
 #title {
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
