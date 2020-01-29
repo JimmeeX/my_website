@@ -4,11 +4,16 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "."
+    "header"
     "title"
     "."
     "."
     "svg";
+
+  #header {
+    grid-area: header;
+    align-self: center;
+  }
 
   #title-text-wrapper {
     grid-area: title;

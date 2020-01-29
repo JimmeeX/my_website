@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button from '../../components/button';
 import Card from '../../components/card';
 
 import projectList from '../../data/projectList';
@@ -14,6 +15,12 @@ const Projects = () => {
             <Card key={key} project={project} />
           )}
         </div>
+        <Button
+          id='projects-button'
+          large
+          text={'See more on Github'}
+          url={'https://github.com/JimmeeX'}
+        />
       </div>
     </div>
   );

@@ -1,13 +1,10 @@
 #journey {
   height: auto;
 
-  // background-color: hotpink;
-
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px auto auto;
+  grid-template-rows: minmax(75px, 100px) auto;
   grid-template-areas:
-    "."
     "title"
     "timeline";
 

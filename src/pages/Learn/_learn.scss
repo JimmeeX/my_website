@@ -1,24 +1,43 @@
 #learn {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px repeat(3, auto) 50px;
-  grid-template-areas:
-    "."
-    "title"
-    "title"
-    "title"
-    ".";
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(100px, 125px);
+  // grid-template-areas:
+  //   "title"
+  //   "paragraph"
+  //   "paragraph"
+  //   "paragraph"
+  //   "button";
 
   #learn-text {
-    grid-area: title;
-    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px, 125px) auto minmax(100px, 125px);
+    grid-template-areas:
+      "title"
+      "paragraph"
+      "button";
 
     padding: 0 10rem;
     text-align: center;
   }
 
-  .button {
-    margin-top: 20px;
+  #learn-header {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #learn-paragraph {
+    grid-area: paragraph;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #learn-button {
+    grid-area: button;
+    align-self: center;
+    justify-self: center;
   }
 }
 

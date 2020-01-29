@@ -1,26 +1,30 @@
 #intro {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px auto repeat(3, 75px);
-  grid-template-areas:
-    "."
-    "title"
-    "."
-    "."
-    ".";
-
   #intro-text {
-    grid-area: title;
-    align-self: center;
-    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px auto repeat(3, 75px);
+    grid-template-areas:
+      "title"
+      "paragraph"
+      "."
+      "."
+      ".";
 
     padding: 0 10rem;
 
     text-align: center;
   }
 
+  #intro-header {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+  }
+
   #intro-paragraph {
-    margin-top: 20px;
+    grid-area: paragraph;
+    align-self: center;
+    justify-self: center;
   }
 }
 

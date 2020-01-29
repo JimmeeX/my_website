@@ -43,9 +43,18 @@ COMPONENTS
   color: white;
 }
 
-.button-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+.button {
+  .button-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+  }
+}
+
+.button-large {
+  .button-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+  }
 }
 
 .timeline {

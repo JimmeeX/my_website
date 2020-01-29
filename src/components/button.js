@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 
 const Button = (props) => {
-  const { disabled, url } = props;
+  const { disabled, url, large, id } = props;
 
   const [hover, setHover] = useState(false);
 
@@ -15,13 +15,19 @@ const Button = (props) => {
     }
   });
 
+  const handleClick = (e) => {
+    if (disabled) e.preventDefault();
+    else e.stopPropagation();
+  };
+
   return (
     <a
-      href={disabled ? null : url}
-      className='button'
+      id={id}
+      href={url}
+      className={large ? 'button-large' : 'button'}
       onMouseEnter={() => setHover(!disabled ? true : false)}
       onMouseLeave={() => setHover(false)}
-      onClick={(e) => e.stopPropagation()}
+      onClick={handleClick}
     >
       <a.div className='button-text' style={fadeSpring}>{props.text}</a.div>
     </a>

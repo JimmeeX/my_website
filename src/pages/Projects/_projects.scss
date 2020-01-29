@@ -2,13 +2,13 @@
   #projects-box {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(75px, 100px);
+    grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(100px, 125px);
     grid-template-areas:
       "title"
       "projects"
       "projects"
       "projects"
-      ".";
+      "button";
 
     background-color: white;
 
@@ -38,6 +38,12 @@
 
       margin: 5px;
     }
+  }
+
+  #projects-button {
+    grid-area: button;
+    align-self: center;
+    justify-self: center;
   }
 }
 

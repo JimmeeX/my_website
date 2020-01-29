@@ -41,9 +41,14 @@ COMPONENTS
   color: white;
 }
 
-.button-text {
+.button .button-text {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
+}
+
+.button-large .button-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
 }
 
 .timeline .panel-logo-text {
@@ -87,15 +92,6 @@ COMPONENTS
   padding: 0;
 }
 
-body {
-  margin: 0;
-  -ms-overflow-style: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
 /*
 =============
 SHARED STYLES
@@ -137,44 +133,58 @@ SHARED STYLES
   background-image: linear-gradient(45deg, #13CAE2, #7328F0);
 }
 
+#header #header-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
 #footer {
   margin-top: -10rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (75px)[3] auto auto 50px;
-      grid-template-rows: repeat(3, 75px) auto auto 50px;
-      grid-template-areas: "." "." "." "title" "icons" ".";
+  -ms-grid-rows: (65px)[3] auto 50px auto 75px;
+      grid-template-rows: repeat(3, 65px) auto 50px auto 75px;
+      grid-template-areas: "." "." "." "logo" "." "icons" ".";
   background-color: #141C3A;
 }
 
-#footer #footer-header {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  grid-area: title;
-  -ms-flex-item-align: center;
-      align-self: center;
-      justify-self: center;
-}
-
 #footer #icon-bar {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: icons;
+  margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#footer #footer-logo {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .icon {
   height: 45px;
   width: 45px;
-  margin: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
   padding: 2px;
   border-radius: 50%;
   background-image: linear-gradient(45deg, #13CAE2, #7328F0);
@@ -227,8 +237,7 @@ SHARED STYLES
 }
 
 .card .card-caption-title {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
@@ -244,21 +253,42 @@ SHARED STYLES
   grid-area: button;
   -ms-flex-item-align: start;
       align-self: flex-start;
+      justify-self: center;
+}
+
+.button, .button-large {
+  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  text-decoration: none;
+  display: -ms-grid;
+  display: grid;
+}
+
+.button .button-text, .button-large .button-text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 .button {
-  display: inline-block;
-  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
   padding: 2px;
   border-radius: 20px;
-  text-decoration: none;
 }
 
 .button .button-text {
   border-radius: 15px;
   padding: 0px 10px;
+}
+
+.button-large {
+  padding: 3px;
+  border-radius: 40px;
+}
+
+.button-large .button-text {
+  border-radius: 35px;
+  padding: 1.2rem;
 }
 
 .timeline {
@@ -368,12 +398,20 @@ SHARED STYLES
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "." "title" "." "." "svg";
+      grid-template-areas: "header" "title" "." "." "svg";
+}
+
+#title #header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #title #title-text-wrapper {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
       justify-self: center;
@@ -434,30 +472,34 @@ SHARED STYLES
   }
 }
 
-#intro {
+#intro #intro-text {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 50px auto (75px)[3];
-      grid-template-rows: 50px auto repeat(3, 75px);
-      grid-template-areas: "." "title" "." "." ".";
+  -ms-grid-rows: 125px auto (75px)[3];
+      grid-template-rows: 125px auto repeat(3, 75px);
+      grid-template-areas: "title" "paragraph" "." "." ".";
+  padding: 0 10rem;
+  text-align: center;
 }
 
-#intro #intro-text {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+#intro #intro-header {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
       align-self: center;
       justify-self: center;
-  padding: 0 10rem;
-  text-align: center;
 }
 
 #intro #intro-paragraph {
-  margin-top: 20px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: paragraph;
+  -ms-flex-item-align: center;
+      align-self: center;
+      justify-self: center;
 }
 
 @media only screen and (max-width: 700px) {
@@ -471,16 +513,15 @@ SHARED STYLES
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(75px, 100px) (auto)[3] minmax(75px, 100px);
-      grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(75px, 100px);
-      grid-template-areas: "title" "projects" "projects" "projects" ".";
+  -ms-grid-rows: minmax(75px, 100px) (auto)[3] minmax(100px, 125px);
+      grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(100px, 125px);
+      grid-template-areas: "title" "projects" "projects" "projects" "button";
   background-color: white;
   padding: 5px;
 }
 
 #projects #projects-header {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
@@ -514,6 +555,15 @@ SHARED STYLES
   margin: 5px;
 }
 
+#projects #projects-button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: button;
+  -ms-flex-item-align: center;
+      align-self: center;
+      justify-self: center;
+}
+
 @media only screen and (max-width: 700px) {
   #projects #projects-box {
     padding: 0px;
@@ -526,14 +576,13 @@ SHARED STYLES
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 50px auto auto;
-      grid-template-rows: 50px auto auto;
-      grid-template-areas: "." "title" "timeline";
+  -ms-grid-rows: minmax(75px, 100px) auto;
+      grid-template-rows: minmax(75px, 100px) auto;
+      grid-template-areas: "title" "timeline";
 }
 
 #journey #journey-header {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
   -ms-flex-item-align: center;
@@ -542,36 +591,56 @@ SHARED STYLES
 }
 
 #journey #journey-timeline {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: timeline;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
-#learn {
+#learn #learn-text {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 50px (auto)[3] 50px;
-      grid-template-rows: 50px repeat(3, auto) 50px;
-      grid-template-areas: "." "title" "title" "title" ".";
-}
-
-#learn #learn-text {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  grid-area: title;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-rows: minmax(100px, 125px) auto minmax(100px, 125px);
+      grid-template-rows: minmax(100px, 125px) auto minmax(100px, 125px);
+      grid-template-areas: "title" "paragraph" "button";
   padding: 0 10rem;
   text-align: center;
 }
 
-#learn .button {
-  margin-top: 20px;
+#learn #learn-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#learn #learn-paragraph {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: paragraph;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#learn #learn-button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: button;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 @media only screen and (max-width: 700px) {

@@ -34,7 +34,6 @@ const Icon = (props) => {
     >
       <a.div className='icon-padding' style={fadeSpring}>
         <AnimatedSVG className='icon-svg' src={src} style={fadeSVGSpring} />
-        {/* <a.img className='icon-svg' src={src} style={fadeSVGSpring} /> */}
       </a.div>
     </a>
   );
