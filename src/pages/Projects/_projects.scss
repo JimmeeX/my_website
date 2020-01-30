@@ -54,5 +54,11 @@
     #projects-box {
       padding: 0px;
     }
+
+    #projects-container {
+      .card {
+        min-width: 250px;
+      }
+    }
   }
 }

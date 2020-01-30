@@ -1,3 +1,5 @@
+// Try avoid long words
+
 const jobs = [
   {
     'logo': 'img:mail.png',

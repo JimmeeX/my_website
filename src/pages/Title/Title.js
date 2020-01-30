@@ -12,7 +12,7 @@ const Title = () => {
         <div className='title'>Aspiring Full-stack Developer</div>
         <div className='subtitle'>I love designing & developing websites and apps to benefit the community.</div>
       </div>
-      <Boy id='title-svg' height={300} />
+      <Boy id='title-svg' />
     </div>
   );
 }

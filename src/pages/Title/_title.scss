@@ -10,6 +10,8 @@
     "."
     "svg";
 
+  padding: 0 10rem;
+
   #header {
     grid-area: header;
     align-self: center;
@@ -27,6 +29,8 @@
     grid-area: svg;
     justify-self: center;
     align-self: end;
+
+    height: 300px;
   }
 
   .subtitle {
@@ -49,4 +53,14 @@
 @keyframes boy-wave {
   from {transform: rotate(-5deg);}
   to {transform: rotate(15deg);}
+}
+
+@media only screen and (max-width: 700px) {
+  #title {
+    padding: 0 20px;
+
+    #title-svg {
+      height: 200px;
+    }
+  }
 }

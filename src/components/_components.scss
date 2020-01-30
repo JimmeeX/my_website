@@ -130,6 +130,7 @@
   .button-text {
     align-self: center;
     justify-self: center;
+    text-align: center;
   }
 }
 
@@ -177,7 +178,7 @@
 
 .timeline-panel {
   display: grid;
-  grid-template-columns: 40fr 10fr 40fr;
+  grid-template-columns: 4fr 1fr 4fr;
   grid-column-gap: 20px;
 
   .panel-section-left {

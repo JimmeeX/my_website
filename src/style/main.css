@@ -76,6 +76,29 @@ COMPONENTS
 }
 
 @media only screen and (max-width: 700px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .header, .header-invert {
+    font-size: 1.5rem;
+  }
+  /*
+  ==========
+  COMPONENTS
+  ==========
+  */
+  .button .button-text {
+    font-size: 0.9rem;
+  }
+  .button-large .button-text {
+    font-size: 1rem;
+  }
+  .card-caption-title {
+    font-size: 0.75rem;
+  }
   .timeline .panel-title, .timeline .panel-logo-text {
     font-size: 1rem;
   }
@@ -87,9 +110,19 @@ COMPONENTS
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .timeline .panel-title {
+    font-size: 0.9rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-width: 300px;
 }
 
 /*
@@ -119,7 +152,7 @@ a {
   margin-top: -10rem;
   min-height: 500px;
   width: 80vw;
-  min-width: 320px;
+  min-width: 280px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -130,7 +163,7 @@ a {
   position: relative;
   margin: auto;
   width: 80vw;
-  min-width: 320px;
+  min-width: 280px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -272,6 +305,7 @@ a {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  text-align: center;
 }
 
 .button {
@@ -323,8 +357,8 @@ a {
 .timeline-panel {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40fr 10fr 40fr;
-      grid-template-columns: 40fr 10fr 40fr;
+  -ms-grid-columns: 4fr 1fr 4fr;
+      grid-template-columns: 4fr 1fr 4fr;
   grid-column-gap: 20px;
 }
 
@@ -402,6 +436,7 @@ a {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "header" "title" "." "." "svg";
+  padding: 0 10rem;
 }
 
 #title #header {
@@ -432,6 +467,7 @@ a {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  height: 300px;
 }
 
 #title .subtitle {
@@ -472,6 +508,15 @@ a {
   to {
     -webkit-transform: rotate(15deg);
             transform: rotate(15deg);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #title {
+    padding: 0 20px;
+  }
+  #title #title-svg {
+    height: 200px;
   }
 }
 
@@ -573,6 +618,9 @@ a {
   #projects #projects-box {
     padding: 0px;
   }
+  #projects #projects-container .card {
+    min-width: 250px;
+  }
 }
 
 #journey {
@@ -584,6 +632,7 @@ a {
   -ms-grid-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
       grid-template-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
       grid-template-areas: "title" "timeline" "button" ".";
+  padding: 0 2.5rem;
 }
 
 #journey #journey-header {
@@ -610,6 +659,12 @@ a {
   -ms-flex-item-align: center;
       align-self: center;
       justify-self: center;
+}
+
+@media only screen and (max-width: 700px) {
+  #journey {
+    padding: 0 5px;
+  }
 }
 
 #learn #learn-text {
