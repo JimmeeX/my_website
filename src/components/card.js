@@ -5,7 +5,7 @@ import { ResizeObserver } from '@juggle/resize-observer';
 
 import Button from './button';
 
-const ratio = 1.5; // Width : Height Ratio
+const ratio = 1.5;
 
 const Card = (props) => {
   const { project } = props;
