@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 import metadata from '../data/metadata';
 
 const SEO = () => {
-  const { title, description, author, lang } = metadata;
+  const { title, description, author, lang, url } = metadata;
 
   return (
     <Helmet
@@ -33,6 +33,10 @@ const SEO = () => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: url,
         },
         {
           name: `twitter:card`,
