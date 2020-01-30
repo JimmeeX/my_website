@@ -515,6 +515,9 @@ a {
   #title {
     padding: 0 20px;
   }
+}
+
+@media only screen and (max-height: 600px) {
   #title #title-svg {
     height: 200px;
   }
