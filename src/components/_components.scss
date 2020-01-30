@@ -202,11 +202,11 @@
     border-radius: 50%;
   }
 
-  .panel-logo-border-show {
+  .panel-logo-border-wrapper {
     position: absolute;
   }
 
-  .panel-logo-border-wrapper {
+  .panel-logo-border-show, .panel-logo-border-hide {
     position: absolute;
   }
 

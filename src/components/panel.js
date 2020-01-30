@@ -156,7 +156,15 @@ const Panel = (props) => {
             width: `${size + 2 * (border + shadow)}px`
           }}
         >
-          <div
+          <div // Hide Vertline from ever appearing
+            className='panel-logo-border-hide'
+            style={{
+              height: `${size + 2 * (border + shadow)}px`,
+              width: `${size + 2 * (border + shadow)}px`,
+              backgroundColor: `white`
+            }}
+          />
+          <div // Use overflow to create draw border effect
             className='panel-logo-border-show'
             style={{
               height: `${borderHeight}px`,
@@ -170,8 +178,7 @@ const Panel = (props) => {
                 height: `${size}px`,
                 width: `${size}px`,
                 border: `${border}px solid white`,
-                boxShadow: `0 0 0 ${shadow}px ${newColor},
-                            inset 0 0 0 ${size / 2}px white`,
+                boxShadow: `0 0 0 ${shadow}px ${newColor}`,
 
               }}
             />

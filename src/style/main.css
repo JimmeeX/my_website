@@ -396,11 +396,11 @@ a {
   border-radius: 50%;
 }
 
-.timeline-panel .panel-logo-border-show {
+.timeline-panel .panel-logo-border-wrapper {
   position: absolute;
 }
 
-.timeline-panel .panel-logo-border-wrapper {
+.timeline-panel .panel-logo-border-show, .timeline-panel .panel-logo-border-hide {
   position: absolute;
 }
 
