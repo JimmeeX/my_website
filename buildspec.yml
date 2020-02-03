@@ -7,17 +7,19 @@ phases:
   pre_build:
     commands:
       # Install Dependencies
-      - echo Installing dependencies
+      - echo Installing dependencies...
       - npm install
   build:
     commands:
       # Test (if any)
       # Build
-      - echo Creating build file
+      - echo Creating build file...
       - npm run build
   post_build:
     commands:
       # Sync with S3
-      - aws s3 sync build s3://www.jameslin.me/ --delete
+      - echo Syncing with S3...
+      - aws s3 sync ./build s3://www.jameslin.me/ --delete
       # Clear Cloudfront cache
+      - echo Creating cloudfront invalidation...
       - aws cloudfront create-invalidation --distribution-id E2FNWEI6K4GW61 --paths '/*'
