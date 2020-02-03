@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # Install Node 12
+      - echo Installing Node 12...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt install -y nodejs
+  pre_build:
+    commands:
+      # Install Dependencies
+      - echo Installing dependencies
+      - npm install
+  build:
+    commands:
+      # Test (if any)
+      # Build
+      - echo Creating build file
+      - npm run build
+  post_build:
+    commands:
+      # Sync with S3
+      - aws s3 sync build s3://www.jameslin.me/ --delete
+      # Clear Cloudfront cache
+      - aws cloudfront create-invalidation --distribution-id E2FNWEI6K4GW61 --paths '/*'
