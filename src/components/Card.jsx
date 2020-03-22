@@ -3,11 +3,11 @@ import { useSpring, animated as a } from 'react-spring';
 import useMeasure from 'react-use-measure';
 import { ResizeObserver } from '@juggle/resize-observer';
 
-import Button from './button';
+import Button from './Button';
 
 const ratio = 1.5;
 
-const Card = (props) => {
+const Card = props => {
   const { project } = props;
 
   const [disabled, setDisabled] = useState(true);
@@ -18,7 +18,11 @@ const Card = (props) => {
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
-    onRest: () => { if(disabled && !flipped) { setDisabled(false) } }
+    onRest: () => {
+      if (disabled && !flipped) {
+        setDisabled(false);
+      }
+    }
   });
 
   const img = require(`../images/projects/${project.img}`);
@@ -45,18 +49,14 @@ const Card = (props) => {
         className='card-caption'
         style={{
           opacity: opacity.interpolate(o => 1 - o),
-          transform,
+          transform
         }}
       >
         <div className='card-caption-title'>{project.title}</div>
-        <Button
-          disabled={disabled}
-          text={'Visit Website'}
-          url={project.url}
-        />
+        <Button disabled={disabled} text={'Visit Website'} url={project.url} />
       </a.div>
     </div>
   );
-}
+};
 
 export default Card;
