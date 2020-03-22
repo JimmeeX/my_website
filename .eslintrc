@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier", "plugin:react/recommended"],
+  "plugins": ["prettier", "react"],
+  "rules": {
+    "prettier/prettier": "off",
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "no-unused-vars": "warn",
+    "no-param-reassign": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-curly-newline": "off",
+    "react/no-array-index-key": "off"
+  }
+}

@@ -3,14 +3,15 @@
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #141C3A;
+  color: #141c3a;
 }
 
-.header, .header-invert {
+.header,
+.header-invert {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #141C3A;
+  color: #141c3a;
 }
 
 .subtitle {
@@ -25,7 +26,8 @@ p {
   font-size: 1rem;
 }
 
-.header-invert, .paragraph-invert {
+.header-invert,
+.paragraph-invert {
   color: white;
 }
 
@@ -66,7 +68,9 @@ COMPONENTS
   font-weight: 800;
 }
 
-.timeline .panel-company, .timeline .panel-date, .timeline .panel-description {
+.timeline .panel-company,
+.timeline .panel-date,
+.timeline .panel-description {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
 }
@@ -82,7 +86,8 @@ COMPONENTS
   .subtitle {
     font-size: 1rem;
   }
-  .header, .header-invert {
+  .header,
+  .header-invert {
     font-size: 1.5rem;
   }
   /*
@@ -99,13 +104,16 @@ COMPONENTS
   .card-caption-title {
     font-size: 0.75rem;
   }
-  .timeline .panel-title, .timeline .panel-logo-text {
+  .timeline .panel-title,
+  .timeline .panel-logo-text {
     font-size: 1rem;
   }
   .timeline .panel-logo-text {
     font-size: 1rem;
   }
-  .timeline .panel-company, .timeline .panel-date, .timeline .panel-description {
+  .timeline .panel-company,
+  .timeline .panel-date,
+  .timeline .panel-description {
     font-size: 0.75rem;
   }
 }
@@ -140,7 +148,7 @@ a {
 
 .page-accent {
   min-height: 500px;
-  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  background-image: linear-gradient(45deg, #13cae2, #7328f0);
 }
 
 .page-box-wrapper {
@@ -167,7 +175,7 @@ a {
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  background-image: linear-gradient(45deg, #13cae2, #7328f0);
 }
 
 #header #header-bar {
@@ -190,8 +198,8 @@ a {
       grid-template-columns: 1fr;
   -ms-grid-rows: (65px)[3] auto 50px auto 75px;
       grid-template-rows: repeat(3, 65px) auto 50px auto 75px;
-      grid-template-areas: "." "." "." "logo" "." "icons" ".";
-  background-color: #141C3A;
+      grid-template-areas: '.' '.' '.' 'logo' '.' 'icons' '.';
+  background-color: #141c3a;
 }
 
 #footer #icon-bar {
@@ -224,7 +232,7 @@ a {
   margin-right: 25px;
   padding: 2px;
   border-radius: 50%;
-  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  background-image: linear-gradient(45deg, #13cae2, #7328f0);
 }
 
 .icon .icon-padding {
@@ -250,13 +258,14 @@ a {
   border-radius: 20px;
 }
 
-.card .card-thumbnail, .card .card-caption {
+.card .card-thumbnail,
+.card .card-caption {
   position: absolute;
   border-radius: 20px;
   height: 100%;
   width: 100%;
   cursor: pointer;
-  background-color: #141C3A;
+  background-color: #141c3a;
 }
 
 .card .card-thumbnail {
@@ -270,7 +279,7 @@ a {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "title" "title" "button";
+      grid-template-areas: 'title' 'title' 'button';
 }
 
 .card .card-caption-title {
@@ -293,13 +302,15 @@ a {
       justify-self: center;
 }
 
-.button, .button-large {
+.button,
+.button-large {
   display: -ms-grid;
   display: grid;
-  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  background-image: linear-gradient(45deg, #13cae2, #7328f0);
 }
 
-.button .button-text, .button-large .button-text {
+.button .button-text,
+.button-large .button-text {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -350,8 +361,8 @@ a {
 .timeline .timeline-vertline {
   position: absolute;
   width: 10px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#13CAE2), to(#7328F0));
-  background-image: linear-gradient(0deg, #13CAE2, #7328F0);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#13cae2), to(#7328f0));
+  background-image: linear-gradient(0deg, #13cae2, #7328f0);
 }
 
 .timeline-panel {
@@ -366,7 +377,8 @@ a {
   text-align: right;
 }
 
-.timeline-panel .panel-section-left, .timeline-panel .panel-section-right {
+.timeline-panel .panel-section-left,
+.timeline-panel .panel-section-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,7 +404,8 @@ a {
           align-items: center;
 }
 
-.timeline-panel .panel-logo-text, .timeline-panel .panel-logo-img {
+.timeline-panel .panel-logo-text,
+.timeline-panel .panel-logo-img {
   border-radius: 50%;
 }
 
@@ -400,7 +413,8 @@ a {
   position: absolute;
 }
 
-.timeline-panel .panel-logo-border-show, .timeline-panel .panel-logo-border-hide {
+.timeline-panel .panel-logo-border-show,
+.timeline-panel .panel-logo-border-hide {
   position: absolute;
 }
 
@@ -422,7 +436,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: linear-gradient(45deg, #13CAE2, #7328F0);
+  background-image: linear-gradient(45deg, #13cae2, #7328f0);
 }
 
 .timeline-panel .panel-description {
@@ -530,7 +544,7 @@ a {
       grid-template-columns: 1fr;
   -ms-grid-rows: 125px auto (75px)[3];
       grid-template-rows: 125px auto repeat(3, 75px);
-      grid-template-areas: "title" "paragraph" "." "." ".";
+      grid-template-areas: 'title' 'paragraph' '.' '.' '.';
   padding: 0 10rem;
   text-align: center;
 }
@@ -566,7 +580,7 @@ a {
       grid-template-columns: 1fr;
   -ms-grid-rows: minmax(75px, 100px) (auto)[3] minmax(100px, 125px);
       grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(100px, 125px);
-      grid-template-areas: "title" "projects" "projects" "projects" "button";
+      grid-template-areas: 'title' 'projects' 'projects' 'projects' 'button';
   background-color: white;
   padding: 5px;
 }
@@ -634,7 +648,7 @@ a {
       grid-template-columns: 1fr;
   -ms-grid-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
       grid-template-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
-      grid-template-areas: "title" "timeline" "button" ".";
+      grid-template-areas: 'title' 'timeline' 'button' '.';
   padding: 0 2.5rem;
 }
 
@@ -677,7 +691,7 @@ a {
       grid-template-columns: 1fr;
   -ms-grid-rows: minmax(100px, 125px) auto minmax(100px, 125px);
       grid-template-rows: minmax(100px, 125px) auto minmax(100px, 125px);
-      grid-template-areas: "title" "paragraph" "button";
+      grid-template-areas: 'title' 'paragraph' 'button';
   padding: 0 10rem;
   text-align: center;
 }

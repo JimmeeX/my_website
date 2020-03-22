@@ -49,24 +49,24 @@ const Projects = () => {
   return (
     <a.div
       ref={ref}
-      id='projects'
-      className='page-box-wrapper'
+      id="projects"
+      className="page-box-wrapper"
       style={fadeSpring}
     >
-      <div id='projects-box' className='page-box'>
-        <div id='projects-header' className='header'>
+      <div id="projects-box" className="page-box">
+        <div id="projects-header" className="header">
           My Recent Projects
         </div>
-        <div id='projects-container'>
+        <div id="projects-container">
           {projectList.map((project, key) => (
             <Card key={key} project={project} />
           ))}
         </div>
         <Button
-          id='projects-button'
+          id="projects-button"
           large
-          text={'See more on Github'}
-          url={'https://github.com/JimmeeX'}
+          text="See more on Github"
+          url="https://github.com/JimmeeX"
         />
       </div>
     </a.div>
