@@ -5,10 +5,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: minmax(75px, 100px) auto minmax(100px, 125px) 50px;
   grid-template-areas:
-    "title"
-    "timeline"
-    "button"
-    ".";
+    'title'
+    'timeline'
+    'button'
+    '.';
 
   padding: 0 2.5rem;
 

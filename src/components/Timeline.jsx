@@ -95,8 +95,8 @@ const Timeline = props => {
   });
 
   return (
-    <div className='timeline' ref={timelineRef}>
-      <div className='timeline-panels' style={{ marginTop: `${start}px` }}>
+    <div className="timeline" ref={timelineRef}>
+      <div className="timeline-panels" style={{ marginTop: `${start}px` }}>
         {panels.map((item, i) => (
           <Panel
             idx={i}
@@ -108,7 +108,7 @@ const Timeline = props => {
         ))}
       </div>
       <a.div
-        className='timeline-vertline-show'
+        className="timeline-vertline-show"
         style={{
           ...vertSpring,
           top: `${vertTop}px`,
@@ -117,7 +117,7 @@ const Timeline = props => {
         ref={vertLineRef}
       >
         <div
-          className='timeline-vertline'
+          className="timeline-vertline"
           style={{
             height: maxVertHeight
           }}

@@ -3,20 +3,12 @@
 }
 
 $colours: (
-  accent: #7328F0,
-  accent_light: #13CAE2,
+  accent: #7328f0,
+  accent_light: #13cae2,
   dark_gray: #222222,
-  black: #141C3A
+  black: #141c3a,
 );
 
-$gradient_diag: linear-gradient(
-    45deg,
-    colour(accent_light),
-    colour(accent)
-  );
+$gradient_diag: linear-gradient(45deg, colour(accent_light), colour(accent));
 
-$gradient_vert: linear-gradient(
-  0deg,
-  colour(accent_light),
-  colour(accent)
-);
+$gradient_vert: linear-gradient(0deg, colour(accent_light), colour(accent));

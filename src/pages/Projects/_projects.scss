@@ -4,11 +4,11 @@
     grid-template-columns: 1fr;
     grid-template-rows: minmax(75px, 100px) repeat(3, auto) minmax(100px, 125px);
     grid-template-areas:
-      "title"
-      "projects"
-      "projects"
-      "projects"
-      "button";
+      'title'
+      'projects'
+      'projects'
+      'projects'
+      'button';
 
     background-color: white;
 

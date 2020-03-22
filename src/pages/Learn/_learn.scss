@@ -4,9 +4,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: minmax(100px, 125px) auto minmax(100px, 125px);
     grid-template-areas:
-      "title"
-      "paragraph"
-      "button";
+      'title'
+      'paragraph'
+      'button';
 
     padding: 0 10rem;
     text-align: center;

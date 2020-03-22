@@ -7,7 +7,8 @@
   color: colour(black);
 }
 
-.header, .header-invert {
+.header,
+.header-invert {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 800;
@@ -26,7 +27,8 @@ p {
   font-size: 1rem;
 }
 
-.header-invert, .paragraph-invert {
+.header-invert,
+.paragraph-invert {
   color: white;
 }
 
@@ -69,7 +71,9 @@ COMPONENTS
     font-weight: 800;
   }
 
-  .panel-company, .panel-date, .panel-description {
+  .panel-company,
+  .panel-date,
+  .panel-description {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
   }
@@ -78,7 +82,6 @@ COMPONENTS
     color: colour(dark_gray);
   }
 }
-
 
 @media only screen and (max-width: 700px) {
   .title {
@@ -89,7 +92,8 @@ COMPONENTS
     font-size: 1rem;
   }
 
-  .header, .header-invert {
+  .header,
+  .header-invert {
     font-size: 1.5rem;
   }
 
@@ -112,7 +116,8 @@ COMPONENTS
   }
 
   .timeline {
-    .panel-title, .panel-logo-text {
+    .panel-title,
+    .panel-logo-text {
       font-size: 1rem;
     }
 
@@ -120,7 +125,9 @@ COMPONENTS
       font-size: 1rem;
     }
 
-    .panel-company, .panel-date, .panel-description {
+    .panel-company,
+    .panel-date,
+    .panel-description {
       font-size: 0.75rem;
     }
   }
