@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useSpring, animated as a, config } from 'react-spring';
 
-import Button from '../../components/button';
-import Card from '../../components/card';
+import Button from '../../components/Button';
+import Card from '../../components/Card';
 
 import projectList from '../../data/projectList';
 
@@ -17,7 +17,7 @@ const Projects = () => {
     if (el == null) {
       setFade(false);
       return;
-    };
+    }
 
     const bounds = el.getBoundingClientRect();
     const { top } = bounds;
@@ -26,30 +26,41 @@ const Projects = () => {
   }, [ref, setFade]);
 
   useEffect(() => {
-    document.addEventListener("scroll", checkFade);
+    document.addEventListener('scroll', checkFade);
     return () => {
-      document.removeEventListener("scroll", checkFade);
-    }
+      document.removeEventListener('scroll', checkFade);
+    };
   }, [checkFade]);
 
   const fadeSpring = useSpring({
     from: { opacity: 0, transform: 'translateY(25%)' },
-    to: fade ? {
-      opacity: 1, transform: 'translateY(0px)'
-    } : {
-      opacity: 0, transform: 'translateY(25%)'
-    },
+    to: fade
+      ? {
+          opacity: 1,
+          transform: 'translateY(0px)'
+        }
+      : {
+          opacity: 0,
+          transform: 'translateY(25%)'
+        },
     config: config.stiff
   });
 
   return (
-    <a.div ref={ref} id='projects' className='page-box-wrapper' style={fadeSpring}>
+    <a.div
+      ref={ref}
+      id='projects'
+      className='page-box-wrapper'
+      style={fadeSpring}
+    >
       <div id='projects-box' className='page-box'>
-        <div id='projects-header' className='header'>My Recent Projects</div>
+        <div id='projects-header' className='header'>
+          My Recent Projects
+        </div>
         <div id='projects-container'>
-          {projectList.map((project, key) =>
+          {projectList.map((project, key) => (
             <Card key={key} project={project} />
-          )}
+          ))}
         </div>
         <Button
           id='projects-button'
@@ -60,6 +71,6 @@ const Projects = () => {
       </div>
     </a.div>
   );
-}
+};
 
 export default Projects;
