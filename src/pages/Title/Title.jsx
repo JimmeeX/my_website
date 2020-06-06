@@ -6,17 +6,17 @@ import { ReactComponent as Boy } from '../../images/boy.svg';
 
 const Title = () => {
   return (
-    <div id='title' className='page-fill'>
+    <section id="title" className="page-fill">
       <Header />
-      <div id='title-text-wrapper'>
-        <div className='title'>Aspiring Full-stack Developer</div>
-        <div className='subtitle'>
+      <div id="title-text-wrapper">
+        <div className="title">Aspiring Full-stack Developer</div>
+        <div className="subtitle">
           I love designing & developing websites and apps to benefit the
           community.
         </div>
       </div>
-      <Boy id='title-svg' />
-    </div>
+      <Boy id="title-svg" />
+    </section>
   );
 };
 

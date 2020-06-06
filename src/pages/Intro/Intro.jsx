@@ -2,7 +2,7 @@ import React from 'react';
 
 const Intro = () => {
   return (
-    <div id="intro" className="page-accent">
+    <section id="intro" className="page-accent">
       <div id="intro-text">
         <div id="intro-header" className="header-invert">
           Hello World! I&apos;m James.
@@ -15,7 +15,7 @@ const Intro = () => {
           Development.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

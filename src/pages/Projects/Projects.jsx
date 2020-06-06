@@ -37,17 +37,17 @@ const Projects = () => {
     to: fade
       ? {
           opacity: 1,
-          transform: 'translateY(0px)'
+          transform: 'translateY(0px)',
         }
       : {
           opacity: 0,
-          transform: 'translateY(25%)'
+          transform: 'translateY(25%)',
         },
-    config: config.stiff
+    config: config.stiff,
   });
 
   return (
-    <a.div
+    <a.section
       ref={ref}
       id="projects"
       className="page-box-wrapper"
@@ -69,7 +69,7 @@ const Projects = () => {
           url="https://github.com/JimmeeX"
         />
       </div>
-    </a.div>
+    </a.section>
   );
 };
 
