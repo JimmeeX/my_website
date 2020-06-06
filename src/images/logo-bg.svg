@@ -5,10 +5,10 @@
       <stop offset="1" stop-color="#7328f0"/>
     </linearGradient>
   </defs>
-  <g id="jl-logo-rect-simple" transform="translate(-70 -435)">
-    <rect id="rect" width="400" height="400" rx="80" transform="translate(70 435)" fill="url(#linear-gradient)"/>
-    <g id="jl-logo-simple" transform="translate(-36 412.486)">
-      <path id="border" d="M206,297.514v-25h37.5v-100H206v-25H406v25H368.5v100H406v25H331v-25h12.5v-100h-75v100H281v25Z" fill="#fff"/>
+  <g class="jl-logo-rect-simple" transform="translate(-70 -435)">
+    <rect class="rect" width="400" height="400" rx="80" transform="translate(70 435)" fill="url(#linear-gradient)"/>
+    <g class="jl-logo-simple" transform="translate(-36 412.486)">
+      <path class="border" d="M206,297.514v-25h37.5v-100H206v-25H406v25H368.5v100H406v25H331v-25h12.5v-100h-75v100H281v25Z" fill="#fff"/>
     </g>
   </g>
 </svg>

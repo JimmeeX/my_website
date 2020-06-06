@@ -3,7 +3,7 @@ import { useSpring, animated as a } from 'react-spring';
 import SVG from 'react-inlinesvg';
 
 const Icon = (props) => {
-  const { url, src } = props;
+  const { url, src, ariaLabel } = props;
 
   const [hover, setHover] = useState(false);
 
@@ -30,6 +30,9 @@ const Icon = (props) => {
     <a
       href={url}
       className="icon"
+      aria-label={ariaLabel}
+      target="_blank"
+      rel="noopener noreferrer"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={(e) => e.stopPropagation()}

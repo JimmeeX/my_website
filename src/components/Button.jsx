@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useSpring, animated as a } from 'react-spring';
 
-const Button = props => {
+const Button = (props) => {
   const { disabled, url, large, id, text } = props;
 
   const [hover, setHover] = useState(false);
@@ -13,11 +13,11 @@ const Button = props => {
       backgroundColor: hover
         ? `rgba(255, 255, 255, 0)`
         : `rgba(255, 255, 255, 1)`,
-      color: hover ? `white` : `black`
-    }
+      color: hover ? `white` : `black`,
+    },
   });
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     if (disabled) e.preventDefault();
     else e.stopPropagation();
   };
@@ -26,6 +26,8 @@ const Button = props => {
     <a
       id={id}
       href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       className={large ? 'button-large' : 'button'}
       onMouseEnter={() => setHover(!disabled)}
       onMouseLeave={() => setHover(false)}

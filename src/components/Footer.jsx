@@ -11,16 +11,25 @@ import EnvelopeIcon from '../images/envelope.svg';
 const Footer = () => {
   return (
     <footer id="footer">
-      <a id="footer-logo" href={metadata.url}>
+      <a id="footer-logo" href={metadata.url} aria-label="James Lin Portfolio">
         <Logo width={50} height={50} />
       </a>
       <div id="icon-bar">
-        <Icon url="https://github.com/JimmeeX" src={GithubIcon} />
+        <Icon
+          url="https://github.com/JimmeeX"
+          src={GithubIcon}
+          ariaLabel="Github"
+        />
         <Icon
           url="https://www.linkedin.com/in/jameslin1997/"
           src={LinkedInIcon}
+          ariaLabel="Linkedin"
         />
-        <Icon url="mailto:jameslin199713@gmail.com" src={EnvelopeIcon} />
+        <Icon
+          url="mailto:jameslin199713@gmail.com"
+          src={EnvelopeIcon}
+          ariaLabel="E-mail"
+        />
       </div>
     </footer>
   );
