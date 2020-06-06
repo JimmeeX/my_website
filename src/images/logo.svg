@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="201" height="151" viewBox="0 0 201 151">
-  <g id="jl-logo-simple" transform="translate(-205.5 -147.014)">
-    <path id="border" d="M206,297.514v-25h37.5v-100H206v-25H406v25H368.5v100H406v25H331v-25h12.5v-100h-75v100H281v25Z" fill="#fff" />
+  <g class="jl-logo-simple" transform="translate(-205.5 -147.014)">
+    <path class="border" d="M206,297.514v-25h37.5v-100H206v-25H406v25H368.5v100H406v25H331v-25h12.5v-100h-75v100H281v25Z" fill="#fff" />
   </g>
 </svg>

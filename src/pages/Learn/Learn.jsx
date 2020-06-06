@@ -51,8 +51,13 @@ const Learn = () => {
         </div>
         <p id="learn-paragraph" className="paragraph-invert">
           I love discovering new apps, software, tech, gadgets and the likes to
-          improve my day-to-day life. Inspired by
-          <a className="text-link" href="https://wiki.nikitavoloboev.xyz/">
+          improve my day-to-day life. Inspired by&nbsp;
+          <a
+            className="text-link"
+            href="https://wiki.nikitavoloboev.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Nikita Voloboev
           </a>
           , I&apos;ve recently started to document & share resources, courses,

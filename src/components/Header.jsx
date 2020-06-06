@@ -9,7 +9,11 @@ const Header = () => {
   return (
     <header id="header">
       <div id="header-bar">
-        <a id="header-logo" href={metadata.url}>
+        <a
+          id="header-logo"
+          href={metadata.url}
+          aria-label="James Lin Portfolio"
+        >
           <Logo width={75} height={75} />
         </a>
         <Button
