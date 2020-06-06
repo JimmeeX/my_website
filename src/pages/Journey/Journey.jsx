@@ -7,7 +7,7 @@ import jobs from '../../data/jobs';
 
 const Journey = () => {
   return (
-    <div id="journey" className="page-fill">
+    <section id="journey" className="page-fill">
       <div id="journey-header" className="header">
         My Journey so Far
       </div>
@@ -20,7 +20,7 @@ const Journey = () => {
         text="Learn more on LinkedIn"
         url="https://www.linkedin.com/in/jameslin1997/"
       />
-    </div>
+    </section>
   );
 };
 

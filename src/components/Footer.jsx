@@ -10,7 +10,7 @@ import EnvelopeIcon from '../images/envelope.svg';
 
 const Footer = () => {
   return (
-    <div id="footer">
+    <footer id="footer">
       <a id="footer-logo" href={metadata.url}>
         <Logo width={50} height={50} />
       </a>
@@ -22,7 +22,7 @@ const Footer = () => {
         />
         <Icon url="mailto:jameslin199713@gmail.com" src={EnvelopeIcon} />
       </div>
-    </div>
+    </footer>
   );
 };
 

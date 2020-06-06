@@ -34,17 +34,17 @@ const Learn = () => {
     to: fade
       ? {
           opacity: 1,
-          transform: 'translateY(0px)'
+          transform: 'translateY(0px)',
         }
       : {
           opacity: 0,
-          transform: 'translateY(25%)'
+          transform: 'translateY(25%)',
         },
-    config: config.stiff
+    config: config.stiff,
   });
 
   return (
-    <a.div ref={ref} id="learn" className="page-card" style={fadeSpring}>
+    <a.section ref={ref} id="learn" className="page-card" style={fadeSpring}>
       <div id="learn-text">
         <div id="learn-header" className="header-invert">
           Sharing
@@ -65,7 +65,7 @@ const Learn = () => {
           url="https://wiki.jameslin.me"
         />
       </div>
-    </a.div>
+    </a.section>
   );
 };
 
