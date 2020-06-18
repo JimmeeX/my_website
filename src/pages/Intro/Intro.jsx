@@ -8,11 +8,9 @@ const Intro = () => {
           Hello World! I&apos;m James.
         </div>
         <p id="intro-paragraph" className="paragraph-invert">
-          I am currently a final year Computer Science & Engineering student
-          with a passion for App Development and Data Science. I also enjoy
-          designing good UI/UX. I am currently looking for a full-time graduate
-          position or internship to jump-start my career in Full-stack
-          Development.
+          I am currently a final year Computer Science & Mechatronics
+          Engineering student with a passion for App Development, Data Science
+          and Robotics. I also enjoy designing good UI/UX and teaching others.
         </p>
       </div>
     </section>
