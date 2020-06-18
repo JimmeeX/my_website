@@ -43,4 +43,4 @@ I used AWS to host this website. Some of its tools involve:
 
     ```docker-compose up --build```
 
-4. That's it! The website should be live and accessible at [http://localhost:3000/]
+4. That's it! The website should be live and accessible at [http://localhost:3000/](http://localhost:3000/)
