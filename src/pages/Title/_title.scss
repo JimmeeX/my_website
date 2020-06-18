@@ -4,11 +4,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "header"
-    "title"
-    "."
-    "."
-    "svg";
+    'header'
+    'title'
+    '.'
+    '.'
+    'svg';
 
   padding: 0 10rem;
 
@@ -51,8 +51,12 @@
 }
 
 @keyframes boy-wave {
-  from {transform: rotate(-5deg);}
-  to {transform: rotate(15deg);}
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -61,7 +65,7 @@
   }
 }
 
-@media only screen and (max-height: 600px ) {
+@media only screen and (max-height: 600px) {
   #title {
     #title-svg {
       height: 200px;

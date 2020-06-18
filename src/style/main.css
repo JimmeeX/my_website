@@ -449,7 +449,7 @@ a {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "header" "title" "." "." "svg";
+      grid-template-areas: 'header' 'title' '.' '.' 'svg';
   padding: 0 10rem;
 }
 
