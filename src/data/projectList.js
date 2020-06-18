@@ -7,12 +7,12 @@ const projectList = [
   {
     title:
       'Wonton Warrior is a young noodle house specialising in handmade wontons and noodles.',
-    img: 'wonton-warrior.png',
+    img: 'wonton-warrior.webp',
     url: 'https://wontonwarrior.com.au',
   },
   {
     title: 'My Recursive Personal Portfolio.',
-    img: 'my-website.png',
+    img: 'my-website.webp',
     url: metadata.url,
   },
 ];
