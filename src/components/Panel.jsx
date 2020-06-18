@@ -50,7 +50,7 @@ const Panel = (props) => {
   const { accent, accentLight } = css;
   const { item, idx, params, vertHeightCurr } = props;
   const { size, sep, border, shadow, length } = params;
-  const { logo, title, company, startDate, endDate } = item;
+  const { logo, title, company, startDate, endDate, url } = item;
 
   // Draw Border (Top-Bottom)
   const objectSize = size + 2 * (border + shadow); // Includes borders + shadow
@@ -113,7 +113,10 @@ const Panel = (props) => {
         alt={value}
         height={size}
         width={size}
-        style={fadeSpring}
+        style={{ ...fadeSpring, cursor: 'pointer' }}
+        onClick={() => {
+          window.open(url, '_blank');
+        }}
       />
     ) : (
       <animated.div
