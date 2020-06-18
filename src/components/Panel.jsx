@@ -17,7 +17,7 @@ const importAll = (r) => {
 };
 
 const files = importAll(
-  require.context('../images/journey', false, /\.(png|jpe?g|svg)$/)
+  require.context('../images/journey', false, /\.(png|jpe?g|svg|webp)$/)
 );
 
 // Functions for Color Interpolation
