@@ -121,6 +121,10 @@
   }
 }
 
+.card:focus {
+  outline: none;
+}
+
 .button,
 .button-large {
   display: grid;
