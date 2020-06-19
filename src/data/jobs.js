@@ -2,7 +2,7 @@
 
 const jobs = [
   {
-    logo: 'img:mail.webp',
+    logo: 'img:mail.jpg',
     title: 'Data Engineer',
     company: 'Marketing Artificial Intelligence Lab',
     startDate: 'Nov 2017',
@@ -10,7 +10,7 @@ const jobs = [
     url: 'https://www.linkedin.com/company/marketing-ai-lab/',
   },
   {
-    logo: 'img:unsw-business.webp',
+    logo: 'img:unsw-business.jpg',
     title: 'Course Tutor & Admin',
     company: 'UNSW Business School',
     startDate: 'Nov 2018',
@@ -18,7 +18,7 @@ const jobs = [
     url: 'https://www.business.unsw.edu.au/',
   },
   {
-    logo: 'img:unsw.webp',
+    logo: 'img:unsw.jpg',
     title: 'Research Assistant',
     company: 'UNSW Mining Engineering',
     startDate: 'Aug 2019',
@@ -26,7 +26,7 @@ const jobs = [
     url: 'https://www.engineering.unsw.edu.au/unsw-mining-engineering',
   },
   {
-    logo: 'img:unsw.webp',
+    logo: 'img:unsw.jpg',
     title: 'Web Developer',
     company: 'UNSW',
     startDate: 'Jan 2019',
@@ -34,7 +34,7 @@ const jobs = [
     url: 'https://www.education.unsw.edu.au/pvce',
   },
   {
-    logo: 'img:canva.webp',
+    logo: 'img:canva.jpg',
     title: 'Frontend Engineer',
     company: 'Canva',
     startDate: 'Jan 2021',
