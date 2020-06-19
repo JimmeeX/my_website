@@ -302,6 +302,10 @@ a {
       justify-self: center;
 }
 
+.card:focus {
+  outline: none;
+}
+
 .button,
 .button-large {
   display: -ms-grid;

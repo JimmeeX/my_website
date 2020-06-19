@@ -10,7 +10,6 @@ const ratio = 1.5;
 const Card = (props) => {
   const { project } = props;
 
-  const [disabled, setDisabled] = useState(true);
   const [flipped, setFlipped] = useState(true); // True for Picture
   const [ref, bounds] = useMeasure({ polyfill: ResizeObserver });
 
@@ -18,11 +17,6 @@ const Card = (props) => {
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
-    onRest: () => {
-      if (disabled && !flipped) {
-        setDisabled(false);
-      }
-    },
   });
 
   const img = require(`../images/projects/${project.img}`);
@@ -34,11 +28,9 @@ const Card = (props) => {
       style={{ height: `${bounds.width / ratio}px` }}
       onClick={() => {
         setFlipped((state) => !state);
-        setDisabled(true);
       }}
       onKeyPress={() => {
         setFlipped((state) => !state);
-        setDisabled(true);
       }}
       role="button"
       tabIndex="0"
@@ -59,7 +51,7 @@ const Card = (props) => {
         }}
       >
         <div className="card-caption-title">{project.title}</div>
-        <Button disabled={disabled} text="Visit Website" url={project.url} />
+        <Button disabled={flipped} text="Visit Website" url={project.url} />
       </a.div>
     </div>
   );
