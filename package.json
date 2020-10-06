@@ -7,24 +7,24 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-inlinesvg": "^1.2.0",
+    "react-inlinesvg": "^2.1.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "3.4.3",
     "react-spring": "^8.0.27",
-    "react-use-measure": "^2.0.1"
+    "react-use-measure": "^2.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
-    "prettier": "^2.0.5"
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
