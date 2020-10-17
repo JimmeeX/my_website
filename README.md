@@ -31,6 +31,16 @@ I used AWS to host this website. Some of its tools involve:
 
 ## Running the Code
 
+### 1. Via Docker
+
+If you want to run the website locally in a non-development environment, you can simply run:
+
+```docker run -p 3000:3000 -i jimmeex/my_website```
+
+### 2. Via Docker and Docker Compose
+
+If you want to play around with the website and make changes in the code, you can:
+
 1. Download the code locally
 
    ```git clone git@github.com:JimmeeX/my_website.git```
@@ -43,4 +53,24 @@ I used AWS to host this website. Some of its tools involve:
 
     ```docker-compose up --build```
 
-4. That's it! The website should be live and accessible at [http://localhost:3000/](http://localhost:3000/)
+### 3. Via npm
+
+If you want to play around with the website and make changes in the code, you can:
+
+1. Download the code locally
+
+   ```git clone git@github.com:JimmeeX/my_website.git```
+
+2. Navigate to the directory
+
+    ```cd my_website```
+
+3. Install packages and dependencies locally
+
+    ```npm install```
+
+4. Run a live server under a development environment
+
+    ```npm start```
+
+After following the steps in any of the 3 methods above, the website should be live and accessible at [http://localhost:3000/](http://localhost:3000/)
