@@ -31,13 +31,13 @@ I used AWS to host this website. Some of its tools involve:
 
 ## Running the Code
 
-### 1. Via Docker
+### 1. Via a [Public Docker Image](https://hub.docker.com/r/jimmeex/my_website)
 
 If you want to run the website locally in a non-development environment, you can simply run:
 
 ```docker run -p 3000:3000 -i jimmeex/my_website```
 
-### 2. Via Docker and Docker Compose
+### 2. Via the Dockerfile
 
 If you want to play around with the website and make changes in the code, you can:
 
