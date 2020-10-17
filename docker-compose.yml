@@ -7,5 +7,6 @@ services:
       - '3000:3000'
     volumes:
       - .:/app
-    command: npm start
+      - /app/node_modules # Prevents node_modules being overwritten by host directory
     stdin_open: true # Address this issue https://github.com/facebook/create-react-app/issues/8688
+    command: npm start
