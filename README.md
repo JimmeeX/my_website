@@ -7,6 +7,7 @@ Made open-source for fellow programmers to pry into to learn. May be helpful for
 This website is currently hosted as a static website.
 
 - [React.js](https://reactjs.org/) - Frontend 'framework' for this website! The project was initialised using [create-react-app](https://github.com/facebook/create-react-app).
+- [TypeScript](https://www.typescriptlang.org/) - Builds types into JavaScript.
 - [Sass](https://sass-lang.com/) - Superset of CSS (adds extra useful features).
 
 ## Notable Packages
