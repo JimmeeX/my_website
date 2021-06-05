@@ -7,11 +7,12 @@ const Intro = () => (
         Hello World! I&apos;m James.
       </div>
       <p id="intro-paragraph" className="paragraph-invert">
-        I am currently a final year Computer Science & Mechatronics Engineering
-        student with a passion for App Development, Data Science and Robotics. I
-        also enjoy designing good UI/UX and teaching others. On the side, I
-        enjoy playing sports casually such as swimming, volleyball, billiards
-        and chess. Nice to meet you! &nbsp;
+        I am currently a Computer Science & Mechatronics Engineering UNSW
+        graduate and Frontend Engineer at Canva with a passion for App
+        Development, Data Science and Robotics. I also enjoy designing good
+        UI/UX and teaching others. On the side, I enjoy playing sports casually
+        such as swimming, volleyball, billiards and chess. Nice to meet you!
+        &nbsp;
         <span aria-label="smile" role="img">
           &#128522;
         </span>
