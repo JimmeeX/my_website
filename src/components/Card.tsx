@@ -47,15 +47,14 @@ const Card = (props: CardProps) => {
         className="card-thumbnail"
         style={{
           opacity,
-          transform: transform.interpolate((t) => `${t} rotateX(180deg)`),
+          transform: transform.to((t) => `${t} rotateX(180deg)`),
           backgroundImage: `url(${img})`,
         }}
       />
       <a.div
         className="card-caption"
         style={{
-          // TODO: FIX
-          opacity: 0,
+          opacity: opacity.to((o) => 1 - o),
           transform,
         }}
       >
