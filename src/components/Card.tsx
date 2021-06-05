@@ -7,7 +7,15 @@ import Button from './Button';
 
 const ratio = 1.5;
 
-const Card = (props) => {
+type CardProps = {
+  project: {
+    title: string;
+    img: string;
+    url: string;
+  };
+};
+
+const Card = (props: CardProps) => {
   const { project } = props;
 
   const [flipped, setFlipped] = useState(true); // True for Picture
@@ -33,7 +41,7 @@ const Card = (props) => {
         setFlipped((state) => !state);
       }}
       role="button"
-      tabIndex="0"
+      tabIndex={0}
     >
       <a.div
         className="card-thumbnail"
@@ -46,7 +54,8 @@ const Card = (props) => {
       <a.div
         className="card-caption"
         style={{
-          opacity: opacity.interpolate((o) => 1 - o),
+          // TODO: FIX
+          opacity: 0,
           transform,
         }}
       >

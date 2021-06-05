@@ -1,20 +1,42 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
     "es6": true
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "extends": ["airbnb", "prettier", "plugin:react/recommended"],
   "plugins": ["prettier", "react"],
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-filename-extension": [2, { "extensions": [".jsx", ".tsx"] }],
     "prettier/prettier": "off",
     "global-require": "off",
     "import/no-dynamic-require": "off",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
     "no-param-reassign": "off",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-curly-newline": "off",
-    "react/no-array-index-key": "off"
+    "react/require-default-props": "off",
+    "react/no-array-index-key": "off",
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "no-shadow": "off"
   }
 }

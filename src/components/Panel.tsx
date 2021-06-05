@@ -2,12 +2,22 @@ import React from 'react';
 import { useSpring, animated, config } from 'react-spring';
 
 import { colours as css } from '../data/css';
+import { JobItem } from '../data/jobs';
 
 const fadeInoffset = 5; // px from border completion
 
+enum RGB {
+  R = 0,
+  G = 1,
+  B = 2,
+}
+
 // Import all files from a directory
-const importAll = (r) => {
-  const files = {};
+/* global __WebpackModuleApi */
+const importAll = (r: __WebpackModuleApi.RequireContext) => {
+  const files: {
+    [index: string]: any;
+  } = {};
 
   r.keys().map((key) => {
     files[key] = r(key);
@@ -21,32 +31,59 @@ const files = importAll(
 );
 
 // Functions for Color Interpolation
-const hexToRgb = (hex) => {
+const hexToRgb = (hex: string) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
+        [RGB.R]: parseInt(result[1], 16),
+        [RGB.G]: parseInt(result[2], 16),
+        [RGB.B]: parseInt(result[3], 16),
       }
     : null;
 };
 
-const interpolateColor = (start, stop, frac) => {
+const interpolateColor = (start: string, stop: string, frac: number) => {
   const rgbStart = hexToRgb(start);
   const rgbStop = hexToRgb(stop);
+  if (!rgbStart || !rgbStop) {
+    return start;
+  }
 
-  const newColor = {};
-  ['r', 'g', 'b'].forEach((c) => {
+  // Initialise with default values, assume that these values
+  // will always be changed
+  const newColor = {
+    [RGB.R]: 0,
+    [RGB.G]: 0,
+    [RGB.B]: 0,
+  };
+
+  [RGB.R, RGB.G, RGB.B].forEach((c) => {
     newColor[c] = Math.round(rgbStart[c] + (rgbStop[c] - rgbStart[c]) * frac);
   });
-  const { r, g, b } = newColor;
-  const newColorString = `rgb(${r},${g},${b})`;
+  const newColorString = `rgb(${newColor[RGB.R]},${newColor[RGB.G]},${
+    newColor[RGB.B]
+  })`;
 
   return newColorString;
 };
 
-const Panel = (props) => {
+type PanelProps = {
+  idx: number;
+  item: JobItem;
+  params: PanelConfig;
+  vertHeightCurr: number;
+};
+
+export type PanelConfig = {
+  start: number;
+  size: number;
+  border: number;
+  shadow: number;
+  sep: number;
+  length: number;
+};
+
+const Panel = (props: PanelProps) => {
   const { accent, accentLight } = css;
   const { item, idx, params, vertHeightCurr } = props;
   const { size, sep, border, shadow, length } = params;

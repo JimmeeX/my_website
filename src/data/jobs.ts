@@ -1,6 +1,15 @@
 // Try avoid long words
 
-const jobs = [
+export type JobItem = {
+  logo: string;
+  title?: string;
+  company?: string;
+  startDate?: string;
+  endDate?: string;
+  url?: string;
+};
+
+const jobs: JobItem[] = [
   {
     logo: 'img:mail.jpg',
     title: 'Data Engineer',

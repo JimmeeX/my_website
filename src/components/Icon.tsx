@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 import SVG from 'react-inlinesvg';
 
-const Icon = (props) => {
+type IconProps = {
+  url: string;
+  src: string;
+  ariaLabel: string;
+};
+
+const Icon = (props: IconProps) => {
   const { url, src, ariaLabel } = props;
 
   const [hover, setHover] = useState(false);
