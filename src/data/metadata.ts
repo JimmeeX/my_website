@@ -3,7 +3,7 @@ const metadata = {
   description: 'Full-stack Developer Portfolio',
   author: 'James Lin',
   lang: 'en',
-  url: 'https://jameslin.me'
+  url: 'https://jameslin.me',
 };
 
 export default metadata;

@@ -7,7 +7,7 @@ const fadeOffset = 100;
 
 const Learn = () => {
   const [fade, setFade] = useState(false);
-  const ref = useRef();
+  const ref = useRef<HTMLAnchorElement>(null);
 
   const checkFade = useCallback(() => {
     const el = ref.current;

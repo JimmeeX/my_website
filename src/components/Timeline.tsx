@@ -3,9 +3,14 @@ import { useSpring, animated as a, config } from 'react-spring';
 import useMeasure from 'react-use-measure';
 import { ResizeObserver } from '@juggle/resize-observer';
 
-import Panel from './Panel';
+import Panel, { PanelConfig } from './Panel';
+import { JobItem } from '../data/jobs';
 
-const Timeline = props => {
+type TimelineProps = {
+  items: JobItem[];
+};
+
+const Timeline = (props: TimelineProps) => {
   const { items } = props;
 
   const [pageWidth, setPageWidth] = useState(document.body.offsetWidth);
@@ -13,10 +18,10 @@ const Timeline = props => {
   const panels = [
     { logo: 'text:The Beginning' },
     ...items,
-    { logo: 'text:More to Come!' }
+    { logo: 'text:More to Come!' },
   ];
 
-  let params;
+  let params: PanelConfig;
   if (pageWidth <= 700) {
     params = {
       start: 50, // Start of first panel from top (px)
@@ -24,7 +29,7 @@ const Timeline = props => {
       border: 5, // px
       shadow: 10, // px
       sep: 200, // Distance between two panel-logos (px)
-      length: panels.length
+      length: panels.length,
     };
   } else {
     params = {
@@ -33,19 +38,19 @@ const Timeline = props => {
       border: 5, // px
       shadow: 10, // px
       sep: 200, // Distance between two panel-logos (px)
-      length: panels.length
+      length: panels.length,
     };
   }
 
   const { start, size, border, shadow, sep } = params;
 
   const [vertLineRef, vertLineBounds] = useMeasure({
-    polyfill: ResizeObserver
+    polyfill: ResizeObserver,
   });
   const vertHeightCurr = vertLineBounds.height;
   const [percentScrolled, setPercentScrolled] = useState(0);
 
-  const timelineRef = useRef();
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   const scrollCallback = useCallback(() => {
     // Get Percent Scrolled
@@ -91,7 +96,7 @@ const Timeline = props => {
   const vertSpring = useSpring({
     from: { height: 0 },
     to: { height: vertHeight },
-    config: config.molasses
+    config: config.molasses,
   });
 
   return (
@@ -112,14 +117,14 @@ const Timeline = props => {
         style={{
           ...vertSpring,
           top: `${vertTop}px`,
-          overflowY: 'hidden'
+          overflowY: 'hidden',
         }}
         ref={vertLineRef}
       >
         <div
           className="timeline-vertline"
           style={{
-            height: maxVertHeight
+            height: maxVertHeight,
           }}
         />
       </a.div>

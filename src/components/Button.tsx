@@ -2,8 +2,20 @@ import React, { useState } from 'react';
 
 import { useSpring, animated as a } from 'react-spring';
 
-const Button = (props) => {
-  const { disabled, url, large, id, text } = props;
+const Button = ({
+  url,
+  id,
+  text,
+  large = false,
+  disabled = false,
+}: {
+  url: string;
+  text: string;
+  id?: string;
+  large?: boolean;
+  disabled?: boolean;
+}) => {
+  // const { disabled, url, large, id, text } = props;
 
   const [hover, setHover] = useState(false);
 
@@ -17,7 +29,7 @@ const Button = (props) => {
     },
   });
 
-  const handleClick = (e) => {
+  const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
     if (disabled) e.preventDefault();
     else e.stopPropagation();
   };

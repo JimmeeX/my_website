@@ -8,13 +8,13 @@ phases:
     commands:
       # Install Dependencies
       - echo Installing dependencies...
-      - npm install
+      - yarn
   build:
     commands:
       # Test (if any)
       # Build
       - echo Creating build file...
-      - npm run build
+      - yarn run build
   post_build:
     commands:
       # Sync with S3
